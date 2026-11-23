@@ -40,62 +40,60 @@ export const StandingWhiteboard = ({
     // 2. Handwritten Marker Title (Blue Dry-Erase Marker)
     ctx.fillStyle = '#1d4ed8';
     ctx.font = 'bold 36px "Segoe UI", sans-serif';
-    ctx.fillText('CLINICAL CARDIOLOGY NOTES', 60, 75);
+    ctx.fillText('GRADE 8 LIFE SCIENCE: THE HEART', 60, 75);
 
     ctx.strokeStyle = '#2563eb';
     ctx.lineWidth = 4;
     ctx.beginPath();
     ctx.moveTo(60, 90);
-    ctx.lineTo(540, 90);
+    ctx.lineTo(600, 90);
     ctx.stroke();
 
     // 3. Flow Pathway Note (Black Marker)
     ctx.fillStyle = '#0f172a';
     ctx.font = 'bold 24px "Segoe UI", sans-serif';
-    ctx.fillText('1. Systemic vs. Pulmonary Flow:', 60, 140);
+    ctx.fillText('1. The Double-Loop Delivery Highway:', 60, 140);
 
     ctx.font = '22px "Segoe UI", sans-serif';
     ctx.fillStyle = '#1e3a8a';
-    ctx.fillText('• RA (Tricuspid) ➔ RV ➔ Pulm. Artery ➔ Lungs', 90, 180);
+    ctx.fillText('• Right Loop: Heart ➔ Lungs (Picks up O₂, drops CO₂)', 90, 180);
     ctx.fillStyle = '#991b1b';
-    ctx.fillText('• LA (Mitral) ➔ LV ➔ Aortic Valve ➔ Body Organs', 90, 220);
+    ctx.fillText('• Left Loop: Heart ➔ Body Cells (Delivers fresh oxygen)', 90, 220);
 
-    // 4. Heart Valve Auscultation (Red & Blue Markers)
+    // 4. Heart Valve Sounds (Red & Blue Markers)
     ctx.fillStyle = '#0f172a';
     ctx.font = 'bold 24px "Segoe UI", sans-serif';
-    ctx.fillText('2. Cardiac Cycle Phonocardiogram:', 60, 280);
+    ctx.fillText('2. Heartbeat Sounds ("Lub-Dub"):', 60, 280);
 
     ctx.fillStyle = '#b91c1c';
     ctx.font = 'bold 22px "Segoe UI", sans-serif';
-    ctx.fillText('• "Lub" (S₁) = Atrioventricular Valves close (Tricuspid/Mitral)', 90, 320);
+    ctx.fillText('• "Lub" = Atrioventricular Valves snap shut', 90, 320);
     ctx.fillStyle = '#1d4ed8';
-    ctx.fillText('• "Dub" (S₂) = Semilunar Valves close (Aortic/Pulmonary)', 90, 360);
+    ctx.fillText('• "Dub" = Semilunar Exit Valves snap shut', 90, 360);
 
-    // 5. Hemodynamic Formula (Green & Black Box)
+    // 5. Exercise Demand Box (Green & Black Box)
     ctx.strokeStyle = '#059669';
     ctx.lineWidth = 3;
     ctx.strokeRect(60, 410, 520, 110);
 
     ctx.fillStyle = '#065f46';
     ctx.font = 'bold 24px "Segoe UI", sans-serif';
-    ctx.fillText('Cardiac Output (Q) Formula:', 80, 448);
+    ctx.fillText('Exercise & Cellular Oxygen Demand:', 80, 448);
 
     ctx.fillStyle = '#047857';
-    ctx.font = 'bold 28px monospace';
-    ctx.fillText('Q = HR × SV', 80, 495);
-    ctx.font = '20px monospace';
-    ctx.fillText('≈ 72 bpm × 70 mL = 5.04 L/min', 270, 495);
+    ctx.font = 'bold 24px monospace';
+    ctx.fillText('Active Muscles ➔ Higher O₂ Need', 80, 495);
 
-    // 6. Conduction Hierarchy (Black Marker)
+    // 6. 3 Main Blood Vessels (Black Marker)
     ctx.fillStyle = '#0f172a';
     ctx.font = 'bold 24px "Segoe UI", sans-serif';
-    ctx.fillText('3. Intrinsic Conduction System:', 60, 565);
+    ctx.fillText('3. The 3 Main Blood Vessels:', 60, 565);
 
     ctx.fillStyle = '#334155';
     ctx.font = '22px "Segoe UI", sans-serif';
-    ctx.fillText('• SA Node (Pacemaker): 60 - 100 bpm', 90, 605);
-    ctx.fillText('• AV Node (Delay Gate): 40 - 60 bpm', 90, 645);
-    ctx.fillText('• Bundle of His ➔ Purkinje Fibers (Ventricular contraction)', 90, 685);
+    ctx.fillText('• Arteries: Carry blood AWAY under high pressure', 90, 605);
+    ctx.fillText('• Capillaries: Microscopic 1-cell thick exchange walls', 90, 645);
+    ctx.fillText('• Veins: Carry blood BACK to heart using one-way valves', 90, 685);
 
     // 7. Small Teacher Chalk/Marker sketch of ECG waveform
     ctx.strokeStyle = '#dc2626';

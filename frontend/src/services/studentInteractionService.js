@@ -4,98 +4,98 @@ import { lectureService } from './lectureService';
 import { physicsFoleyAudioService } from './physicsFoleyAudioService';
 
 /**
- * Authentic Classroom Side-Talk Dialogues
- * Cycles through realistic whispering exchanges between the student and neighboring classmates.
+ * Authentic Grade 8 Classroom Side-Talk Dialogues
+ * Realistic whispering exchanges between middle school classmates during the science lesson.
  */
 export const CLASSROOM_SIDE_TALKS = [
   {
-    studentLine: 'Psst... did you understand what he said about the mitral valve?',
+    studentLine: 'Psst... did you understand why the left ventricle is so thick?',
     neighborName: 'Liam',
-    neighborLine: "Yeah, it's the bicuspid valve on the left side! Don't let Mr. John catch us whispering.",
-    topic: 'Mitral Valve',
+    neighborLine: "Yeah! Because it has to pump blood all the way down to your toes, while the right side only pushes to the lungs.",
+    topic: 'Left Ventricle',
   },
   {
-    studentLine: 'Hey, what did you write down for the conduction pathway?',
+    studentLine: 'Hey, what did you write down for the 3 types of blood vessels?',
     neighborName: 'Sophia',
-    neighborLine: 'SA node to AV node, then Bundle of His to Purkinje fibers. I drew an arrow in my notes.',
-    topic: 'Electrical Conduction',
+    neighborLine: 'Arteries carry blood Away, veins bring it back, and capillaries are tiny delivery tubes!',
+    topic: 'Blood Vessels',
   },
   {
-    studentLine: 'Look at the digital screen, that capillary network animation is mesmerizing.',
+    studentLine: 'Look at the diagram, the red and blue loop is really cool.',
     neighborName: 'Marcus',
-    neighborLine: 'Totally, but I think the whole pulmonary loop journey is going to be on the quiz...',
-    topic: 'Capillary Flow',
+    neighborLine: 'Totally! Blue is used blood going to the lungs for oxygen, and red is fresh blood going to the body.',
+    topic: 'Double Loop',
   },
   {
     studentLine: 'Hey, do you have a spare pencil? My lead just snapped.',
     neighborName: 'Chloe',
-    neighborLine: 'Here, take my mechanical pencil. Just remember to give it back after class!',
+    neighborLine: 'Here, take my spare pencil. Just make sure you give it back after class!',
     topic: 'Borrowing Stationery',
   },
   {
-    studentLine: 'Wait, is pulmonary circulation the low-pressure or high-pressure loop?',
+    studentLine: 'Wait, what makes the "lub-dub" heartbeat sound again?',
     neighborName: 'Liam',
-    neighborLine: 'Low pressure to protect the alveoli! Systemic is high pressure to reach your toes.',
-    topic: 'Pulmonary Loop',
+    neighborLine: 'The one-way valves snapping shut! Like trapdoors inside your heart.',
+    topic: 'Lub-Dub Sound',
   },
   {
-    studentLine: 'Mr. John is covering a ton of cardiology terms fast today...',
+    studentLine: 'Mr. John is moving pretty fast through the double loop today...',
     neighborName: 'Sophia',
-    neighborLine: 'Shh! Check your desk device or the digital screen, it mirrors all the diagrams in real time.',
+    neighborLine: 'Check the board or screen! It shows the 4 chambers: Atria on top, Ventricles on the bottom.',
     topic: 'Lecture Pacing',
   },
   {
-    studentLine: 'What happens if ventricular contraction occurs without valve closure?',
+    studentLine: 'Why do veins need valves if arteries don’t have them?',
     neighborName: 'Marcus',
-    neighborLine: 'Regurgitation heart murmur. That is why the lub-dub sound is so important.',
-    topic: 'Heart Murmur',
+    neighborLine: 'Because blood in veins is at low pressure, so valves stop blood from falling backward!',
+    topic: 'Vein Valves',
   },
   {
-    studentLine: 'Are you ready for the assessment questions when the lecture ends?',
+    studentLine: 'Are you ready for the pop quiz when the teacher finishes?',
     neighborName: 'Chloe',
-    neighborLine: 'I think so! Just remember the left ventricle is three times thicker than the right.',
+    neighborLine: 'I think so! Just remember: Left Ventricle is the strongest chamber in the whole heart.',
     topic: 'Quiz Prep',
   },
 ];
 
 /**
- * Biology & Cardiology Student Inquiry Questions for Teacher John
+ * Grade 8 Science Student Inquiry Questions for Teacher John
  */
 export const STUDENT_INQUIRY_QUESTIONS = [
   {
     studentQ:
-      'Excuse me, Mr. John! Could you clarify why the left ventricle myocardium needs to be three times thicker than the right?',
+      'Excuse me, Mr. John! Why is the left ventricle so much stronger and thicker than the right ventricle?',
     teacherA:
-      'An excellent question! The left ventricle must overcome systemic vascular resistance to pump blood across sixty thousand miles to your head and toes, whereas the right ventricle only pumps low pressure to the adjacent lungs.',
+      'A fantastic question! The left ventricle must pump blood through the aorta all the way across your body to your brain and toes, whereas the right ventricle only pushes blood a short distance to the nearby lungs.',
     topic: 'Ventricular Thickness',
   },
   {
     studentQ:
-      "Mr. John, what actually produces the audible 'lub-dub' heart sounds we hear with a stethoscope?",
+      "Mr. John, what actually creates the 'lub-dub' heart sound we hear with a stethoscope?",
     teacherA:
-      'Great observation! The "lub" is the resonant closure of the atrioventricular valves—tricuspid and mitral—and the "dub" is the crisp snap of the aortic and pulmonary semilunar valves.',
+      'Great curiosity! That "lub-dub" sound is made by your heart valves snapping shut like trapdoors! The "lub" is the atria-ventricle valves closing, and the "dub" is the exit valves snapping shut right after.',
     topic: 'Heart Sounds',
   },
   {
     studentQ:
-      'Could you repeat which blood vessels carry oxygenated versus deoxygenated blood in the pulmonary circuit?',
+      'Why is blood drawn in blue on our science diagrams if all human blood is actually red?',
     teacherA:
-      'Certainly! Remember, the pulmonary artery carries deoxygenated blood away to the lungs, while the four pulmonary veins return freshly oxygenated blood back to the left atrium.',
-    topic: 'Pulmonary Circuit',
+      'Excellent observation! Real human blood is always red, but diagrams use blue to represent oxygen-poor blood on its way to the lungs, and bright red for blood carrying fresh oxygen to your body!',
+    topic: 'Blue vs Red Blood',
   },
   {
     studentQ:
-      'Mr. John, what happens physiologically if one of the heart valves fails to seal completely?',
+      'Mr. John, why can we feel a pulse on our wrist or neck, but not in our veins?',
     teacherA:
-      'If a valve fails to seal, blood regurgitates backward, causing a heart murmur. The heart is forced to work substantially harder to sustain adequate cardiac output.',
-    topic: 'Valve Regurgitation',
+      'Great scientific inquiry! Arteries stretch and pulse with every heartbeat because blood is pushed into them under high pressure. By the time blood reaches veins, the pressure is gentle and smooth.',
+    topic: 'Pulse & Arteries',
   },
   {
     studentQ:
-      'Why does the SA node act as the master pacemaker rather than the AV node?',
+      'What happens if one of the heart valves does not close all the way?',
     teacherA:
-      'Because the sinoatrial node has the fastest spontaneous depolarization rate—around sixty to one hundred beats per minute—overriding and pacing the slower nodal centers downstream.',
-    topic: 'Cardiac Pacemaker',
+      'If a valve doesn’t seal tightly, a tiny bit of blood leaks backward. Doctors can hear this with a stethoscope as a gentle swishing sound called a heart murmur.',
+    topic: 'Heart Valves & Murmurs',
   },
 ];
 

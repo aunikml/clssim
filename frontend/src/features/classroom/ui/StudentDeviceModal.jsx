@@ -223,11 +223,11 @@ export const StudentDeviceModal = () => {
                 </Box>
               )}
 
-              {/* Open-Ended Clinical Inquiry (Q4) */}
+              {/* Open-Ended Science Inquiry (Q4) */}
               {currentQ.type === 'open_ended' && (
                 <Box sx={{ p: 1.5, borderRadius: '8px', backgroundColor: 'rgba(6, 78, 59, 0.3)', border: '1px solid #10b981' }}>
                   <Typography variant="caption" sx={{ color: '#34d399', fontWeight: 800 }}>
-                    CLINICAL REASONING SUBMISSION:
+                    SCIENCE REASONING SUBMISSION:
                   </Typography>
                   <Typography variant="body2" sx={{ color: '#f8fafc', fontStyle: 'italic', mt: 0.5 }}>
                     &ldquo;{activeStudentAnswer?.answerText || currentQ.studentAnswerText || currentQ.sampleAnswer}&rdquo;
@@ -235,11 +235,11 @@ export const StudentDeviceModal = () => {
                 </Box>
               )}
 
-              {/* Dynamic Hemodynamics Graph Builder (Q5) */}
+              {/* Dynamic Blood Vessel Flow Graph Builder (Q5) */}
               {currentQ.type === 'graph_builder' && (
                 <Box sx={{ p: 1.5, borderRadius: '8px', backgroundColor: 'rgba(2, 132, 199, 0.2)', border: '1px solid #38bdf8' }}>
                   <Typography variant="caption" sx={{ color: '#38bdf8', fontWeight: 800 }}>
-                    DYNAMIC HEMODYNAMICS PLOTTER:
+                    BLOOD VESSEL FLOW PATHWAY PLOTTER:
                   </Typography>
                   <Typography variant="body2" sx={{ color: '#f8fafc', fontStyle: 'italic', mt: 0.5 }}>
                     &ldquo;{activeStudentAnswer?.answerText || currentQ.studentAnswerText || currentQ.sampleAnswer}&rdquo;

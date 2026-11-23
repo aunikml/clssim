@@ -49,11 +49,11 @@ export const SessionReportCardModal = () => {
     letterGrade.startsWith('B') ? '#38bdf8' : '#f59e0b';
 
   const handleDownloadNotes = () => {
-    const text = `BIOL-301: Cardiovascular Physiology - Session Notes\n\nGrade: ${letterGrade} (${overallAvg}%)\nSeat: ${seatedSeatId || 'Front Row'}\nAcoustic Audibility: ${acousticAudibilityPercent}%\nQuiz Score: ${sessionStats.quizScore}/${sessionStats.totalQuestions}\n\nKey Concepts:\n1. 4 Chambers: Left/Right Atria, Left/Right Ventricles\n2. Dual Circulation: Pulmonary Loop (Lungs) & Systemic Loop (Body)\n3. Heart Valves: Tricuspid, Mitral/Bicuspid, Aortic, Pulmonary Semilunar\n4. Myocardium: Cardiac muscle tissue ensuring rhythmic contraction.`;
+    const text = `Grade 8 Life Science: The Human Heart & Circulatory System - Session Notes\n\nGrade: ${letterGrade} (${overallAvg}%)\nSeat: ${seatedSeatId || 'Front Row'}\nAcoustic Audibility: ${acousticAudibilityPercent}%\nQuiz Score: ${sessionStats.quizScore}/${sessionStats.totalQuestions}\n\nKey Concepts:\n1. 4 Chambers: Left/Right Atria (receiving) and Left/Right Ventricles (pumping)\n2. Double-Loop Circulation: Pulmonary Loop (to lungs) & Systemic Loop (to body)\n3. 3 Blood Vessels: Arteries (Away), Capillaries (Exchange), Veins (Return)\n4. Heart Valves: One-way trapdoors creating the 'Lub-Dub' heartbeat sound.`;
     const element = document.createElement('a');
     const file = new Blob([text], { type: 'text/plain' });
     element.href = URL.createObjectURL(file);
-    element.download = 'Cardiovascular_Physiology_Study_Notes.txt';
+    element.download = 'Grade_8_Circulatory_System_Notes.txt';
     document.body.appendChild(element);
     element.click();
     document.body.removeChild(element);
@@ -145,7 +145,7 @@ export const SessionReportCardModal = () => {
         >
           <Box>
             <Typography variant="caption" sx={{ color: '#94a3b8' }}>
-              Subject: BIOL-301 Cardiovascular Physiology
+              Subject: Grade 8 Life Science · Circulatory System
             </Typography>
             <Typography variant="body2" sx={{ color: '#f1f5f9', fontWeight: 700 }}>
               Module: Four Chambers, Heart Valves & Circulation

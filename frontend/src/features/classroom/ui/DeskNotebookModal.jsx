@@ -19,7 +19,7 @@ import { classroomAtmosphereAudioService } from '../../../services/classroomAtmo
 
 export const DeskNotebookModal = ({ open, onClose }) => {
   const [notes, setNotes] = useState(
-    "Biology Class Notes — Anatomy of the Human Heart:\n• 4 Chambers: Right/Left Atria (receiving), Right/Left Ventricles (pumping).\n• Dual Circulation: Pulmonary (low pressure to lungs) & Systemic (high pressure to body).\n• Left Ventricle has the thickest myocardium (3× thicker than right) to supply the systemic circulation.\n• Valves: Tricuspid & Mitral (AV valves, 'Lub' sound); Pulmonary & Aortic (Semilunar valves, 'Dub' sound).\n• Conduction: SA Node (Pacemaker) ➔ AV Node (0.1s delay) ➔ Bundle of His ➔ Purkinje Fibers.\n\nPersonal Observations:\n"
+    "Grade 8 Life Science Notes — Human Heart & Blood Vessels:\n• 4 Chambers: Left/Right Atria (top receiving rooms), Left/Right Ventricles (bottom pumping rooms).\n• Left Ventricle: Thickest muscle wall because it pumps oxygen-rich blood all the way across the body!\n• 3 Types of Blood Vessels: Arteries (Away from heart), Capillaries (microscopic 1-cell exchange), Veins (return blood with valves).\n• Valves: One-way trapdoors that prevent backflow and make the \"Lub-Dub\" heartbeat sound.\n• Exercise Connection: Heart rate increases during exercise to rush oxygen to active muscle cells.\n\nPersonal Observations:\n"
   );
 
   useEffect(() => {
@@ -28,13 +28,13 @@ export const DeskNotebookModal = ({ open, onClose }) => {
     }
   }, [open]);
 
-  const handleInsertEquation = () => {
-    setNotes((prev) => prev + "\n[Blood Flow] Vena Cava ➔ RA ➔ Tricuspid ➔ RV ➔ Pulm. Artery ➔ Lungs ➔ Pulm. Veins ➔ LA ➔ Mitral ➔ LV ➔ Aorta\n");
+  const handleInsertBloodFlow = () => {
+    setNotes((prev) => prev + "\n[Blood Flow Pathway] Heart ➔ Arteries ➔ Capillaries (Oxygen Delivery) ➔ Veins ➔ Heart\n");
     classroomAtmosphereAudioService.playPaperRustle();
   };
 
-  const handleInsertLightReaction = () => {
-    setNotes((prev) => prev + "\n[Conduction Highway] SA Node (Pacemaker) ➔ AV Node (0.1s delay) ➔ Bundle of His ➔ Bundle Branches ➔ Purkinje Fibers.\n");
+  const handleInsertChambers = () => {
+    setNotes((prev) => prev + "\n[The 4 Chambers] Right Side = Oxygen-poor blood to lungs | Left Side = Oxygen-rich blood to body.\n");
     classroomAtmosphereAudioService.playPaperRustle();
   };
 
@@ -79,25 +79,25 @@ export const DeskNotebookModal = ({ open, onClose }) => {
       <DialogContent sx={{ p: 2.5, backgroundColor: '#fefce8' }}>
         {/* Quick Template Insert Buttons */}
         <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 1.5 }}>
-          <Tooltip title="Insert overall chemical equation into your notes">
+          <Tooltip title="Insert blood flow pathway into your notes">
             <Button
               size="small"
               variant="outlined"
               startIcon={<AutoFixHighIcon />}
-              onClick={handleInsertEquation}
+              onClick={handleInsertBloodFlow}
               sx={{ borderColor: '#d97706', color: '#92400e', fontSize: '0.72rem' }}
             >
-              + Chemical Equation
+              + Blood Flow Path
             </Button>
           </Tooltip>
-          <Tooltip title="Insert light-dependent reaction notes">
+          <Tooltip title="Insert the 4 heart chambers summary into notes">
             <Button
               size="small"
               variant="outlined"
-              onClick={handleInsertLightReaction}
+              onClick={handleInsertChambers}
               sx={{ borderColor: '#d97706', color: '#92400e', fontSize: '0.72rem' }}
             >
-              + Light Reactions
+              + 4 Chambers & Loop
             </Button>
           </Tooltip>
           <Button

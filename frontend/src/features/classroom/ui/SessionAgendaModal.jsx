@@ -66,7 +66,7 @@ export const SessionAgendaModal = () => {
                 Course Session Agenda
               </Typography>
               <Typography variant="h6" sx={{ fontWeight: 800, lineHeight: 1.2 }}>
-                BIOL-301: Cardiovascular Physiology
+                Grade 8 Life Science: Human Circulatory System
               </Typography>
             </Box>
           </Box>

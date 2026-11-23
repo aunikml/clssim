@@ -956,7 +956,7 @@ class DigitalScreenService {
     // Right Panel Header
     ctx.fillStyle = '#38bdf8';
     ctx.font = 'bold 22px system-ui, sans-serif';
-    ctx.fillText('ANATOMICAL ANALYSIS & HEMODYNAMICS', rightX + 25, 130);
+    ctx.fillText('ANATOMICAL ANALYSIS & BLOOD FLOW', rightX + 25, 130);
 
     // Dynamic Focus Card 1
     const cardY1 = 150;
@@ -1229,7 +1229,7 @@ class DigitalScreenService {
       q.type === 'open_ended'
         ? 'CLINICAL INQUIRY · OPEN-ENDED PHYSIOLOGY'
         : q.type === 'graph_builder'
-        ? 'HEMODYNAMICS PLOTTER · DYNAMIC GRAPH BUILDER'
+        ? 'BLOOD VESSEL FLOW PATHWAY · DYNAMIC GRAPH BUILDER'
         : 'CARDIOLOGY PRACTICUM · LIVE DEVICE DISPATCH';
     ctx.fillText(typeLabel, 325, 137);
 
@@ -1327,11 +1327,11 @@ class DigitalScreenService {
       }
       ctx.fillText(aLine, 85, aY);
 
-      // Laplace's Law & Hemodynamics Analysis Cards
+      // Exercise & Oxygen Demand Analysis Cards
       const mechY = boxY + 165;
       const cardW = (leftW - 130) / 2;
 
-      // Card 1: Laplace's Law
+      // Card 1: Cellular Respiration & Exercise
       ctx.fillStyle = 'rgba(30, 41, 59, 0.85)';
       ctx.roundRect(65, mechY, cardW, 140, 8);
       ctx.fill();
@@ -1341,17 +1341,17 @@ class DigitalScreenService {
 
       ctx.fillStyle = '#38bdf8';
       ctx.font = 'bold 14px system-ui, sans-serif';
-      ctx.fillText("LAPLACE'S LAW OF WALL STRESS:", 80, mechY + 28);
+      ctx.fillText('EXERCISE & MUSCLE ENERGY DEMAND:', 80, mechY + 28);
       ctx.fillStyle = '#fde047';
       ctx.font = 'bold 16px monospace';
-      ctx.fillText('Wall Stress (σ) = (P · r) / (2 · h)', 80, mechY + 56);
+      ctx.fillText('Cell Energy: Glucose + O₂ ➔ Energy + CO₂', 80, mechY + 56);
       ctx.fillStyle = '#cbd5e1';
       ctx.font = '12px system-ui, sans-serif';
-      ctx.fillText('• P = Systolic Pressure (~160 mmHg)', 80, mechY + 82);
-      ctx.fillText('• h = Left Ventricle Wall Thickness (12➔18mm)', 80, mechY + 104);
-      ctx.fillText('• Myocytes hypertrophy to restore normal σ', 80, mechY + 124);
+      ctx.fillText('• Sprinting muscles burn fuel at 10× normal rate', 80, mechY + 82);
+      ctx.fillText('• Working cells instantly demand more oxygen', 80, mechY + 104);
+      ctx.fillText('• Heart pumps faster & harder to meet the need', 80, mechY + 124);
 
-      // Card 2: Afterload Asymmetry
+      // Card 2: Circulatory Delivery Response
       ctx.fillStyle = 'rgba(30, 41, 59, 0.85)';
       ctx.roundRect(75 + cardW, mechY, cardW, 140, 8);
       ctx.fill();
@@ -1361,15 +1361,15 @@ class DigitalScreenService {
 
       ctx.fillStyle = '#f43f5e';
       ctx.font = 'bold 14px system-ui, sans-serif';
-      ctx.fillText('HEMODYNAMIC AFTERLOAD ASYMMETRY:', 90 + cardW, mechY + 28);
+      ctx.fillText('CIRCULATORY SYSTEM RESPONSE:', 90 + cardW, mechY + 28);
       ctx.fillStyle = '#ffffff';
       ctx.font = '12px system-ui, sans-serif';
-      ctx.fillText('• Left Ventricle: Systemic afterload (140-180 mmHg)', 90 + cardW, mechY + 56);
-      ctx.fillText('• Right Ventricle: Pulmonary circuit remains low (~25 mmHg)', 90 + cardW, mechY + 80);
+      ctx.fillText('• Heart Rate climbs from 70 bpm up to 140+ bpm', 90 + cardW, mechY + 56);
+      ctx.fillText('• Blood rushes O₂ to muscles & sweeps away CO₂', 90 + cardW, mechY + 80);
       ctx.fillStyle = '#4ade80';
-      ctx.fillText('• Result: Concentric LV Hypertrophy, RV completely spared!', 90 + cardW, mechY + 106);
+      ctx.fillText('• Capillaries dilate to increase local blood supply', 90 + cardW, mechY + 106);
       ctx.fillStyle = '#fef08a';
-      ctx.fillText('✓ CLINICALLY VERIFIED PHYSIOLOGY RATIONALE', 90 + cardW, mechY + 128);
+      ctx.fillText('✓ GRADE 8 LIFE SCIENCE PRINCIPLE VERIFIED', 90 + cardW, mechY + 128);
 
     } else if (q.type === 'graph_builder') {
       // -----------------------------------------------------------------------
@@ -1440,7 +1440,7 @@ class DigitalScreenService {
         { name: 'Vena Cava', xP: 0.95, pSys: 8, pDia: 4, mean: 5 },
       ];
 
-      // Draw Arteriolar Resistance Glow Zone
+      // Draw Capillary Resistance Glow Zone
       const artX1 = plotX + 0.35 * plotW;
       const artX2 = plotX + 0.55 * plotW;
       ctx.fillStyle = 'rgba(239, 68, 68, 0.15)';
@@ -1504,7 +1504,7 @@ class DigitalScreenService {
       }
       ctx.stroke();
 
-      // Highlight the Steepest Arteriolar Resistance Drop with Callout Badge
+      // Highlight Capillary Oxygen Delivery with Callout Badge
       const calloutX = plotX + 0.46 * plotW;
       const calloutY = plotY + ((140 - 60) / 140) * plotH;
       ctx.fillStyle = '#ef4444';
@@ -1522,10 +1522,10 @@ class DigitalScreenService {
 
       ctx.fillStyle = '#ffffff';
       ctx.font = 'bold 12px system-ui, sans-serif';
-      ctx.fillText('★ STEEPEST PRESSURE DROP', calloutX - 98, calloutY - 37);
+      ctx.fillText('★ CAPILLARY O₂ EXCHANGE', calloutX - 98, calloutY - 37);
       ctx.fillStyle = '#fef08a';
       ctx.font = '11px monospace';
-      ctx.fillText('85 ➔ 35 mmHg (~60% Total TPR)', calloutX - 98, calloutY - 20);
+      ctx.fillText('Single-File Red Blood Cells', calloutX - 98, calloutY - 20);
 
       // Traveling pulse particle along curve
       const particleProg = (t * 0.4) % 1.0;
@@ -1554,7 +1554,7 @@ class DigitalScreenService {
       ctx.fillStyle = '#4ade80';
       ctx.font = 'bold 13px system-ui, sans-serif';
       ctx.fillText(
-        '✓ CONCLUSION: Arteriolar smooth muscle constriction generates ~60% of TPR to dampen high pressure before capillary entry.',
+        '✓ CONCLUSION: Heart pumps blood through Arteries ➔ Capillaries exchange oxygen ➔ Veins return blood to the heart.',
         gx + 20,
         gy + gh - 12
       );
@@ -1702,22 +1702,22 @@ class DigitalScreenService {
     ctx.font = '13px system-ui, sans-serif';
     ctx.fillText('1. Sophia Garcia (Row 2, Seat 2):', rightX + 35, aCardY + 60);
     ctx.fillStyle = '#94a3b8';
-    ctx.fillText('   Left Ventricle thick myocardium answer', rightX + 35, aCardY + 80);
+    ctx.fillText('   Left Ventricle muscle power answer', rightX + 35, aCardY + 80);
 
     ctx.fillStyle = '#ffffff';
     ctx.fillText('2. Ethan Vance (Row 3, Seat 5):', rightX + 35, aCardY + 105);
     ctx.fillStyle = '#94a3b8';
-    ctx.fillText('   Mitral (Bicuspid) valve identification', rightX + 35, aCardY + 125);
+    ctx.fillText('   One-way heart valve trapdoor answer', rightX + 35, aCardY + 125);
 
     ctx.fillStyle = '#ffffff';
     ctx.fillText('3. Liam Patel (Row 1, Seat 3):', rightX + 35, aCardY + 150);
     ctx.fillStyle = '#4ade80';
-    ctx.fillText('   Laplace Law & LV Afterload clinical inquiry', rightX + 35, aCardY + 170);
+    ctx.fillText('   Exercise & muscle oxygen inquiry', rightX + 35, aCardY + 170);
 
     ctx.fillStyle = '#ffffff';
     ctx.fillText('4. Ethan Vance (Row 3, Seat 1):', rightX + 35, aCardY + 195);
     ctx.fillStyle = '#fef08a';
-    ctx.fillText('   Hemodynamics vascular pressure curve plotter', rightX + 35, aCardY + 215);
+    ctx.fillText('   Blood vessel flow pathway graph builder', rightX + 35, aCardY + 215);
 
     // Footer
     ctx.fillStyle = '#4ade80';

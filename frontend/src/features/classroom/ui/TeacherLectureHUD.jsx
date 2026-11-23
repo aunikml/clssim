@@ -348,7 +348,7 @@ export const TeacherLectureHUD = () => {
                   }}
                 >
                   <Typography variant="caption" sx={{ color: '#059669', fontWeight: 700, display: 'block', mb: 0.4 }}>
-                    Liam Patel's Clinical Reasoning Submission:
+                    Liam Patel's Science Reasoning Submission:
                   </Typography>
                   <Typography variant="body2" sx={{ color: '#1e293b', fontSize: '11.5px', lineHeight: 1.4 }}>
                     "{activeStudentAnswer?.answerText || currentQ.studentAnswerText || currentQ.sampleAnswer}"
@@ -368,7 +368,7 @@ export const TeacherLectureHUD = () => {
                     '&:hover': { backgroundColor: '#047857' },
                   }}
                 >
-                  Confirm & Grade Liam's Clinical Answer
+                  Confirm & Grade Liam's Science Answer
                 </Button>
               </Box>
             )}
@@ -386,10 +386,10 @@ export const TeacherLectureHUD = () => {
                   }}
                 >
                   <Typography variant="caption" sx={{ color: '#0284c7', fontWeight: 700, display: 'block', mb: 0.4 }}>
-                    Ethan Vance's Vascular Gradient Plot:
+                    Ethan Vance's Blood Vessel Flow Sequence:
                   </Typography>
                   <Typography variant="body2" sx={{ color: '#1e293b', fontSize: '11.5px', lineHeight: 1.4, mb: 0.8 }}>
-                    Aorta (120/80) ➔ Arteries (115/75) ➔ <strong style={{ color: '#dc2626' }}>Arterioles (85➔35 mmHg, ★ 60% TPR Drop)</strong> ➔ Capillaries (35➔15) ➔ Veins (4 mmHg)
+                    Heart ➔ Arteries (High Pressure) ➔ <strong style={{ color: '#dc2626' }}>Capillaries (Single-File O₂ Delivery)</strong> ➔ Veins (Valves) ➔ Heart
                   </Typography>
                 </Box>
                 <Button
@@ -406,7 +406,7 @@ export const TeacherLectureHUD = () => {
                     '&:hover': { backgroundColor: '#0369a1' },
                   }}
                 >
-                  Plot Hemodynamic Curve on Digital Board
+                  Plot Blood Vessel Flow Pathway on Digital Board
                 </Button>
               </Box>
             )}

@@ -4,7 +4,7 @@ import { lectureService, HEART_ANATOMY_QUIZ } from './lectureService';
 import { physicsFoleyAudioService } from './physicsFoleyAudioService';
 
 /**
- * Roster of Medical Students Available for Cold Calling & Clinical Inquiry
+ * Roster of Grade 8 Science Students Available for Cold Calling & Inquiry
  */
 export const TEACHER_STUDENT_ROSTER = [
   {
@@ -12,65 +12,65 @@ export const TEACHER_STUDENT_ROSTER = [
     name: 'Sophia Garcia',
     seatId: 'Row 2, Seat 2',
     avatarKey: 'sophia',
-    topic: 'Ventricular Myocardium',
+    topic: 'Left Ventricle Power',
     teacherPrompt:
-      'Sophia, could you explain to the class why the Left Ventricle myocardium is three times thicker than the Right Ventricle?',
+      'Sophia, why is the muscle wall of the Left Ventricle so much thicker than the Right Ventricle?',
     studentAnswer:
-      'The left ventricle must generate high pressure to pump oxygenated blood across sixty thousand miles of systemic circulation, while the right ventricle only pumps low pressure to the lungs!',
+      'Because the left ventricle has to pump oxygen-rich blood all the way across the entire body to our brain and toes, while the right ventricle only has to push blood a short distance to our lungs!',
     teacherFeedback:
-      'Precisely, Sophia! High systemic vascular resistance demands a robust left ventricular wall. Outstanding answer.',
+      'Exactly right, Sophia! Pumping blood through miles of body vessels requires a much stronger, thicker muscle wall.',
   },
   {
     id: 'ethan',
     name: 'Ethan Vance',
     seatId: 'Row 3, Seat 1',
     avatarKey: 'ethan',
-    topic: 'Arteriolar Resistance',
+    topic: 'Capillary Exchange',
     teacherPrompt:
-      'Ethan, along the entire vascular highway, where does the steepest drop in blood pressure occur, and why?',
+      'Ethan, why are capillary blood vessels so microscopic that red blood cells have to squeeze through in single file?',
     studentAnswer:
-      'Across the arterioles, Mr. John! Arteriolar smooth muscle constriction creates sixty percent of Total Peripheral Resistance, dropping pressure from 85 down to 35 millimeters of mercury.',
+      'Because their walls are only one cell thick, Mr. John! That lets oxygen and nutrients easily pass right through into our body cells and pick up carbon dioxide waste!',
     teacherFeedback:
-      'Spot on, Ethan! That crucial pressure dampening protects our fragile capillary beds from hydrostatic injury.',
+      'Spot on, Ethan! That ultra-thin barrier allows fast, life-saving diffusion between blood and our body cells.',
   },
   {
     id: 'liam',
     name: 'Liam Patel',
     seatId: 'Row 1, Seat 3',
     avatarKey: 'liam',
-    topic: "Laplace's Law & Afterload",
+    topic: 'Heart Rate & Exercise',
     teacherPrompt:
-      "Liam, walk us through the hemodynamic mechanism of concentric LV hypertrophy in chronic systemic hypertension.",
+      'Liam, why does your heart beat so much faster when you sprint during gym class?',
     studentAnswer:
-      "Chronic systemic hypertension elevates LV afterload. By Laplace's Law—wall stress equals pressure times radius divided by twice wall thickness—myocytes hypertrophy concentrically to normalize systolic wall stress!",
+      'When our leg muscles work hard, they burn energy fast and demand lots more oxygen! So the heart pumps faster and harder to deliver fresh oxygenated blood!',
     teacherFeedback:
-      "Flawless clinical deduction, Liam. Concentric myocyte replication directly restores wall stress equilibrium.",
+      'Great explanation, Liam! Working muscle cells need a faster delivery of oxygen and fuel to keep running.',
   },
   {
     id: 'maya',
     name: 'Maya Lin',
     seatId: 'Row 2, Seat 4',
     avatarKey: 'maya',
-    topic: 'Atrioventricular Valves',
+    topic: 'One-Way Heart Valves',
     teacherPrompt:
-      'Maya, which anatomical valve prevents systolic blood regurgitation from the left ventricle into the left atrium?',
+      'Maya, what is the main job of the heart valves, and what sound do they make when they snap shut?',
     studentAnswer:
-      'The bicuspid or mitral valve! Its chordae tendineae and papillary muscles prevent cusp eversion during ventricular contraction.',
+      'They act like one-way trapdoors so blood can only flow forward! When they snap shut, they make the classic "Lub-Dub" heartbeat sound we hear through a stethoscope!',
     teacherFeedback:
-      'Correct, Maya! The mitral valve seals firmly during ventricular systole to maintain forward cardiac output.',
+      'Correct, Maya! Valves stop blood from flowing backwards, keeping the delivery loop moving forward.',
   },
   {
     id: 'marcus',
     name: 'Marcus Brody',
     seatId: 'Row 1, Seat 5',
     avatarKey: 'marcus',
-    topic: 'Cardiac Pacemaker',
+    topic: 'Arteries vs. Veins',
     teacherPrompt:
-      'Marcus, which intrinsic cardiac cluster initiates the spontaneous electrical impulse that paces normal sinus rhythm?',
+      'Marcus, what is the key difference between an artery and a vein?',
     studentAnswer:
-      'The Sinoatrial or SA Node in the superior right atrium! It spontaneously fires sixty to one hundred action potentials every minute.',
+      'Arteries carry blood away from the heart under high pressure with thick elastic walls, while veins carry blood back to the heart at lower pressure and use valves to prevent backflow!',
     teacherFeedback:
-      'Exactly, Marcus! The SA node drives rhythmic depolarizations downward to the AV node and ventricles.',
+      'Outstanding, Marcus! Remember the rule: A for Artery means Away from the heart!',
   },
 ];
 
@@ -96,7 +96,7 @@ class TeacherInteractionService {
   // =========================================================================
 
   /**
-   * Prompt a specific student from the roster to answer a clinical cardiology question
+   * Prompt a specific student from the roster to answer a Grade 8 science question
    */
   callOnStudent(studentId) {
     if (this.isCallingStudent) return;

@@ -211,11 +211,11 @@ class BlackboardService {
       ctx.fillText('• Right Atrium (RA): Thin-walled receiving chamber from Vena Cavae (Deox)', 140, 280);
       ctx.fillText('• Right Ventricle (RV): Pumps to lungs via Pulmonary Trunk (Wall: 3-5mm)', 140, 330);
       ctx.fillText('• Left Atrium (LA): Receives oxygenated blood from 4 Pulmonary Veins', 140, 380);
-      ctx.fillText('• Left Ventricle (LV): Thickest myocardium (12-15mm) to supply systemic body!', 140, 430);
+      ctx.fillText('• Left Ventricle (LV): Thickest muscle wall to pump oxygenated blood to the whole body!', 140, 430);
 
       ctx.fillStyle = '#f43f5e';
       ctx.font = 'bold 29px "Inter", sans-serif';
-      ctx.fillText('FOUR ONE-WAY VALVES (Prevent Systolic Regurgitation):', 140, 495);
+      ctx.fillText('FOUR ONE-WAY VALVES (Prevent Backflow):', 140, 495);
 
       ctx.fillStyle = '#ffffff';
       ctx.font = '25px "Inter", sans-serif';
@@ -493,19 +493,19 @@ class BlackboardService {
       ctx.textAlign = 'left';
       ctx.fillStyle = '#fde047';
       ctx.font = 'bold 38px "Inter", sans-serif';
-      ctx.fillText('4. The Cardiac Cycle: Hemodynamics & Assessment Prep', 120, 185);
+      ctx.fillText('4. Lesson Review: The Heart & Assessment Prep', 120, 185);
 
       ctx.fillStyle = '#ffffff';
       ctx.font = '28px "Inter", sans-serif';
-      ctx.fillText('• Ventricular Systole: Myocardial contraction; high-pressure ejection (~120 mmHg)', 140, 250);
-      ctx.fillText('• Ventricular Diastole: Myocardial relaxation; ventricular filling (~80 mmHg)', 140, 315);
-      ctx.fillText('• Stroke Volume (SV): ~70 mL of blood ejected per heartbeat at rest', 140, 380);
-      ctx.fillText('• Cardiac Output (CO): Heart Rate × Stroke Volume ≈ 5.0 Liters/min', 140, 445);
-      ctx.fillText('• Coronary Arteries: Branch off base of Aorta to supply oxygen to heart muscle', 140, 510);
+      ctx.fillText('• Ventricular Contraction: Ventricles squeeze blood out under high pressure', 140, 250);
+      ctx.fillText('• Ventricular Refilling: Heart muscle relaxes so chambers can refill with blood', 140, 315);
+      ctx.fillText('• Heart Rate (Pulse): ~70 beats per minute at rest, climbs during exercise', 140, 380);
+      ctx.fillText('• The 3 Blood Vessels: Arteries (Away) ➔ Capillaries (Oxygen Delivery) ➔ Veins (Return)', 140, 445);
+      ctx.fillText('• Heart Valves: One-way trapdoors that snap shut to produce the "Lub-Dub" sound', 140, 510);
 
       ctx.fillStyle = '#86efac';
       ctx.font = 'bold 32px "Inter", sans-serif';
-      ctx.fillText('🔔 Lecture Complete! Prepare for Interactive Cardiology Pop Quiz.', 140, 615);
+      ctx.fillText('🔔 Lecture Complete! Prepare for Interactive Science Pop Quiz.', 140, 615);
 
       // Quiz Info Box
       ctx.strokeStyle = '#f43f5e';
