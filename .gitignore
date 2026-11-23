@@ -1,0 +1,144 @@
+# ==============================================================================
+# Git Ignore - 3D Classroom Simulator (Full-Stack React + Three.js + Django)
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Dependencies & Package Managers
+# ------------------------------------------------------------------------------
+node_modules/
+frontend/node_modules/
+package-lock.json.bak
+yarn.lock.bak
+pnpm-lock.yaml.bak
+
+# ------------------------------------------------------------------------------
+# Production Builds & Bundling
+# ------------------------------------------------------------------------------
+dist/
+dist-ssr/
+frontend/dist/
+frontend/dist-ssr/
+*.local
+
+# ------------------------------------------------------------------------------
+# Python & Django Environment
+# ------------------------------------------------------------------------------
+__pycache__/
+*/__pycache__/
+*/*/__pycache__/
+*/*/*/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+bin/
+var/
+sdist/
+develop-eggs/
+.installed.cfg
+lib/
+lib64/
+
+# Virtual Environments
+venv/
+venv*/
+.venv/
+env/
+backend/venv/
+backend/.venv/
+backend/env/
+ENV/
+env.bak/
+venv.bak/
+
+# Django Databases & Migrations
+*.sqlite3
+*.db
+db.sqlite3
+backend/db.sqlite3
+
+# Django Media & Static Collections
+media/
+backend/media/
+staticfiles/
+backend/staticfiles/
+
+# ------------------------------------------------------------------------------
+# Environment Variables & Secrets
+# ------------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+backend/.env
+backend/.env.*
+!backend/.env.example
+
+# ------------------------------------------------------------------------------
+# Logs & Process Diagnostics
+# ------------------------------------------------------------------------------
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+celerybeat-schedule
+celerybeat.pid
+
+# ------------------------------------------------------------------------------
+# IDE, Editor & OS Metadata
+# ------------------------------------------------------------------------------
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*~
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ------------------------------------------------------------------------------
+# Testing & Coverage
+# ------------------------------------------------------------------------------
+coverage/
+.nyc_output/
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# ------------------------------------------------------------------------------
+# Temp & Scratch Folders
+# ------------------------------------------------------------------------------
+tmp/
+temp/
+scratch/
+.cache/
+.eslintcache
