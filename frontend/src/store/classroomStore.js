@@ -65,6 +65,21 @@ export const useClassroomStore = create((set, get) => ({
   isDeviceBroadcastLocked: true,
   toggleDeviceBroadcastLock: () => set((state) => ({ isDeviceBroadcastLocked: !state.isDeviceBroadcastLocked })),
 
+  // Plickers Paper Card & Low-Resource Scan Modal
+  isPlickersModalOpen: false,
+  plickersActiveSeatId: null,
+  plickersCardOrientation: 'A', // 'A' | 'B' | 'C' | 'D'
+  plickersScannedCount: 20,
+  openPlickersModal: (seatId) => set({ isPlickersModalOpen: true, plickersActiveSeatId: seatId }),
+  closePlickersModal: () => set({ isPlickersModalOpen: false, plickersActiveSeatId: null }),
+  rotatePlickersCard: () => {
+    const order = ['A', 'B', 'C', 'D'];
+    const cur = get().plickersCardOrientation || 'A';
+    const next = order[(order.indexOf(cur) + 1) % 4];
+    set({ plickersCardOrientation: next });
+  },
+  setPlickersCardOrientation: (opt) => set({ plickersCardOrientation: opt }),
+
   // Student Connected Device Inspection Modal
   isDeviceInspected: false,
   openDeviceInspection: () => set({ isDeviceInspected: true }),
@@ -111,9 +126,9 @@ export const useClassroomStore = create((set, get) => ({
   activeGesture: null,
 
   // ============================================================
-  // Classroom Era A/B Contrast: 'traditional' vs 'edtech'
+  // Classroom Era 3-Tier Spectrum: 'traditional' | 'low_resource' | 'high_resource'
   // ============================================================
-  classroomEra: 'traditional', // Default to traditional for contrast demonstration
+  classroomEra: 'traditional', // 'traditional' | 'low_resource' | 'high_resource'
   eraNotification: null,
   showEraComparisonHUD: true,
   setEraNotification: (msg) => set({ eraNotification: msg }),
@@ -121,47 +136,71 @@ export const useClassroomStore = create((set, get) => ({
   toggleEraComparisonHUD: () => set((state) => ({ showEraComparisonHUD: !state.showEraComparisonHUD })),
 
   toggleClassroomEra: () => {
-    const nextEra = get().classroomEra === 'traditional' ? 'edtech' : 'traditional';
+    const cur = get().classroomEra;
+    const nextEra =
+      cur === 'traditional'
+        ? 'low_resource'
+        : cur === 'low_resource'
+        ? 'high_resource'
+        : 'traditional';
     get().setClassroomEra(nextEra);
   },
 
   setClassroomEra: (era) => {
-    const isEdTech = era === 'edtech';
-    const notifMsg = isEdTech
-      ? 'Classroom Metamorphosis: Smart EdTech (2026) Active — 4K Screen, Tablet Sync & 100% Audibility'
-      : 'Classroom Metamorphosis: Traditional Slate (1980s) Active — Blackboard, Paper Notebooks & Distance Drop-off';
+    const normalizedEra = era === 'edtech' ? 'high_resource' : era;
+    let notifMsg = '';
+    let displayMode = 'chalkboard';
+    let showDevices = false;
+
+    if (normalizedEra === 'high_resource') {
+      notifMsg = 'Classroom Metamorphosis: High-Resource EdTech (2026) — 4K Interactive Display & 1-to-1 Student Tablets';
+      displayMode = 'digital_screen';
+      showDevices = true;
+    } else if (normalizedEra === 'low_resource') {
+      notifMsg = 'Classroom Metamorphosis: Low-Resource Tech — 1 Budget Projector, Plickers Paper Cards & Shared BYOD Mobiles';
+      displayMode = 'projector_screen';
+      showDevices = false;
+    } else {
+      notifMsg = 'Classroom Metamorphosis: Traditional Slate (1980s) — Chalkboard, Paper Notebooks & Distance Drop-off';
+      displayMode = 'chalkboard';
+      showDevices = false;
+    }
 
     set({
-      classroomEra: era,
-      teachingDisplayMode: isEdTech ? 'digital_screen' : 'chalkboard',
-      showStudentDevices: isEdTech,
+      classroomEra: normalizedEra,
+      teachingDisplayMode: displayMode,
+      showStudentDevices: showDevices,
       eraNotification: notifMsg,
     });
 
-    // Play Metamorphosis Audio Chime / Slate Latch
-    classroomAtmosphereAudioService.playEraTransitionSound(era);
+    // Play Metamorphosis Audio Chime / Projector Hum / Slate Latch
+    classroomAtmosphereAudioService.playEraTransitionSound(normalizedEra);
 
     // Auto-clear notification toast after 4s
     setTimeout(() => {
       if (get().eraNotification === notifMsg) {
         set({ eraNotification: null });
       }
-    }, 4000);
+    }, 4500);
 
     // Re-evaluate pedagogical metrics under new era
     const dist = get().teacherAudioDistance || 5.0;
     get().updatePedagogicalMetrics(dist);
   },
 
-  // Teaching Display Mode: 'chalkboard' | 'digital_screen'
+  // Teaching Display Mode: 'chalkboard' | 'projector_screen' | 'digital_screen'
   teachingDisplayMode: 'chalkboard',
   toggleTeachingDisplayMode: () => {
     get().toggleClassroomEra();
   },
   setTeachingDisplayMode: (mode) => {
+    let era = 'traditional';
+    if (mode === 'digital_screen') era = 'high_resource';
+    else if (mode === 'projector_screen') era = 'low_resource';
+
     set({
       teachingDisplayMode: mode,
-      classroomEra: mode === 'digital_screen' ? 'edtech' : 'traditional',
+      classroomEra: era,
       showStudentDevices: mode === 'digital_screen',
     });
   },
@@ -303,17 +342,26 @@ export const useClassroomStore = create((set, get) => ({
   // Update pedagogical metrics based on distance & active classroom era
   updatePedagogicalMetrics: (dist) => {
     const d = parseFloat(dist) || 0;
-    const isEdTech = get().classroomEra === 'edtech';
+    const era = get().classroomEra;
+    const isHighRes = era === 'high_resource' || era === 'edtech';
+    const isLowRes = era === 'low_resource';
 
     // Acoustic Clarity
-    const audibility = isEdTech
-      ? 100 // Digital spatial broadcast feed gives uniform 100% clarity
-      : Math.max(25, Math.min(100, Math.round(100 - (d - 3) * 7.5))); // Physical inverse-square falloff
+    let audibility = 100;
+    if (isHighRes) {
+      audibility = 100; // Digital broadcast feed gives 100% clarity
+    } else if (isLowRes) {
+      audibility = 88; // Budget front speaker amplification provides uniform ~88% clarity
+    } else {
+      audibility = Math.max(25, Math.min(100, Math.round(100 - (d - 3) * 7.5))); // Physical inverse-square falloff
+    }
 
     // Visual Legibility
     let legibility = 'High (Clear view)';
-    if (isEdTech) {
+    if (isHighRes) {
       legibility = 'Ultra 4K (Mirrored to Student Tablet)';
+    } else if (isLowRes) {
+      legibility = d > 8.0 ? 'Moderate (Projector Keystone & Ambient Wash)' : 'High (1080p Screen Projection)';
     } else {
       if (d > 7.5) {
         legibility = 'Low (Distance blur; chalk squinting required)';

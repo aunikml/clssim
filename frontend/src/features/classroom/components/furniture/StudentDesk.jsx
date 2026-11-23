@@ -5,6 +5,7 @@ import { StudentChair } from './StudentChair';
 import { ClassroomAvatar } from './ClassroomAvatar';
 import { PhysicsDeskStationery } from './PhysicsDeskStationery';
 import { StudentDevice } from './StudentDevice';
+import { LowResourceDeskProps } from './LowResourceDeskProps';
 import { StudentActionWheel } from './StudentActionWheel';
 import { useClassroomStore } from '../../../../store/classroomStore';
 
@@ -22,6 +23,8 @@ export const StudentDesk = ({
   const setInspectTarget = useClassroomStore((state) => state.setInspectTarget);
   const openNotebook = useClassroomStore((state) => state.openNotebook);
   const openDeviceInspection = useClassroomStore((state) => state.openDeviceInspection);
+  const openPlickersModal = useClassroomStore((state) => state.openPlickersModal);
+  const classroomEra = useClassroomStore((state) => state.classroomEra);
   const sitDown = useClassroomStore((state) => state.sitDown);
 
   const lectureState = useClassroomStore((state) => state.lectureState);
@@ -35,6 +38,7 @@ export const StudentDesk = ({
   const teachingDisplayMode = useClassroomStore((state) => state.teachingDisplayMode);
   const activeDisruptionEvent = useClassroomStore((state) => state.activeDisruptionEvent);
 
+  const isLowRes = classroomEra === 'low_resource';
   const hasDevice = teachingDisplayMode === 'digital_screen' && showStudentDevices;
 
   // Dynamic student body language based on personality style and lecture phase
@@ -235,8 +239,13 @@ export const StudentDesk = ({
           />
         )}
 
-        {/* Written Notes & Physical Worksheet: ONLY present when digital screen & device mode is OFF */}
-        {!hasDevice && (
+        {/* Low-Resource EdTech: Plickers Paper Card & Shared Mobile Device */}
+        {isLowRes && (
+          <LowResourceDeskProps seatId={seatIdentifier} isMySeat={isMySeat} />
+        )}
+
+        {/* Written Notes & Physical Worksheet: ONLY present in traditional era */}
+        {!hasDevice && !isLowRes && (
           <>
             {/* Stationery on Desk: Small Spiral Notebook */}
             <mesh position={[-0.15, 0.78, 0.02]} rotation={[0, 0.1, 0]} castShadow>
@@ -373,6 +382,31 @@ export const StudentDesk = ({
                     <span>Device</span>
                   </button>
                 )}
+                {isLowRes && (
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      openPlickersModal(seatIdentifier);
+                    }}
+                    style={{
+                      backgroundColor: '#0284c7',
+                      color: '#ffffff',
+                      border: '1px solid rgba(255,255,255,0.4)',
+                      padding: '4px 9px',
+                      borderRadius: '6px',
+                      fontSize: '11px',
+                      fontWeight: '800',
+                      cursor: 'pointer',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '4px',
+                      boxShadow: '0 2px 8px rgba(2, 132, 199, 0.4)',
+                    }}
+                  >
+                    <span style={{ backgroundColor: 'rgba(0,0,0,0.3)', padding: '1px 4px', borderRadius: '4px', fontSize: '9px' }}>F</span>
+                    <span>Plickers Card</span>
+                  </button>
+                )}
               </div>
             </div>
           </Html>
@@ -461,6 +495,30 @@ export const StudentDesk = ({
                 >
                   <span style={{ backgroundColor: 'rgba(0,0,0,0.4)', padding: '1px 3px', borderRadius: '3px', fontSize: '8px' }}>F</span>
                   <span>Terminal</span>
+                </button>
+              )}
+              {isLowRes && (
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    openPlickersModal(seatIdentifier);
+                  }}
+                  style={{
+                    backgroundColor: 'rgba(56, 189, 248, 0.2)',
+                    color: '#38bdf8',
+                    border: '1px solid rgba(56, 189, 248, 0.4)',
+                    padding: '2px 7px',
+                    borderRadius: '5px',
+                    fontSize: '10px',
+                    fontWeight: 700,
+                    cursor: 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '4px',
+                  }}
+                >
+                  <span style={{ backgroundColor: 'rgba(0,0,0,0.4)', padding: '1px 3px', borderRadius: '3px', fontSize: '8px' }}>F</span>
+                  <span>Plickers Card</span>
                 </button>
               )}
             </div>

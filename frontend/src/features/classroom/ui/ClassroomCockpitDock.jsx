@@ -810,8 +810,10 @@ export const ClassroomCockpitDock = ({ open, onToggle }) => {
                       }}
                     >
                       {teachingDisplayMode === 'digital_screen'
-                        ? 'Switch to Traditional Slate Blackboard'
-                        : 'Switch to 4K Digital Screen & Whiteboard'}
+                        ? 'Era: High-Tech (Click for Traditional)'
+                        : teachingDisplayMode === 'projector_screen'
+                        ? 'Era: Low-Tech (Click for High-Tech)'
+                        : 'Era: Traditional (Click for Low-Tech)'}
                     </Button>
 
                     {/* Student Devices Toggle Option (Only displayed when Digital Screen is chosen) */}

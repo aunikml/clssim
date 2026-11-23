@@ -57,13 +57,21 @@ export const PlayerMovementController = () => {
         }
       }
 
-      // 'F' Key: Toggle Connected Student Device
+      // 'F' Key: Toggle Connected Student Device or Plickers Paper Card
       if (e.code === 'KeyF') {
         const state = useClassroomStore.getState();
-        if (state.isDeviceInspected) {
-          state.closeDeviceInspection();
+        if (state.classroomEra === 'low_resource') {
+          if (state.isPlickersModalOpen) {
+            state.closePlickersModal();
+          } else {
+            state.openPlickersModal(state.seatedSeatId || 'R1-S1');
+          }
         } else {
-          state.openDeviceInspection();
+          if (state.isDeviceInspected) {
+            state.closeDeviceInspection();
+          } else {
+            state.openDeviceInspection();
+          }
         }
       }
 

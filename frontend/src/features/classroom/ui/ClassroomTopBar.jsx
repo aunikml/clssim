@@ -37,6 +37,7 @@ import {
   Logout as LogoutIcon,
   HistoryEdu as TraditionalIcon,
   Computer as EdTechIcon,
+  Smartphone as LowTechIcon,
   People as PeopleIcon,
   Add as AddIcon,
   Remove as RemoveIcon,
@@ -283,8 +284,8 @@ export const ClassroomTopBar = ({ onOpenAuth, onOpenControls }) => {
             '&::-webkit-scrollbar': { display: 'none' },
           }}
         >
-          {/* Master Classroom Era A/B Contrast Segmented Toggle */}
-          <Tooltip title="Instant Pedagogical Transformation: Traditional Slate (1980s) vs Smart EdTech (2026) [Hot-key: T]">
+          {/* Master Classroom Era 3-Tier Spectrum Toggle */}
+          <Tooltip title="Pedagogical Era Spectrum: Traditional (1980s) ➔ Low-Resource Tech (Frugal) ➔ High-Resource (2026) [Key: T]">
             <ButtonGroup
               size="small"
               sx={{
@@ -298,14 +299,14 @@ export const ClassroomTopBar = ({ onOpenAuth, onOpenControls }) => {
               <Button
                 variant={classroomEra === 'traditional' ? 'contained' : 'text'}
                 onClick={() => setClassroomEra('traditional')}
-                startIcon={<TraditionalIcon sx={{ fontSize: 15 }} />}
+                startIcon={<TraditionalIcon sx={{ fontSize: 14 }} />}
                 sx={{
                   borderRadius: '6px !important',
-                  fontSize: '0.72rem',
+                  fontSize: '0.7rem',
                   fontWeight: 800,
                   textTransform: 'none',
-                  px: 1.1,
-                  py: 0.3,
+                  px: 1.0,
+                  py: 0.28,
                   backgroundColor: classroomEra === 'traditional' ? '#b45309' : 'transparent',
                   color: classroomEra === 'traditional' ? '#ffffff' : '#94a3b8',
                   '&:hover': {
@@ -313,27 +314,47 @@ export const ClassroomTopBar = ({ onOpenAuth, onOpenControls }) => {
                   },
                 }}
               >
-                📜 Trad (1980s)
+                📜 Trad
               </Button>
               <Button
-                variant={classroomEra === 'edtech' ? 'contained' : 'text'}
-                onClick={() => setClassroomEra('edtech')}
-                startIcon={<EdTechIcon sx={{ fontSize: 15 }} />}
+                variant={classroomEra === 'low_resource' ? 'contained' : 'text'}
+                onClick={() => setClassroomEra('low_resource')}
+                startIcon={<LowTechIcon sx={{ fontSize: 14 }} />}
                 sx={{
                   borderRadius: '6px !important',
-                  fontSize: '0.72rem',
+                  fontSize: '0.7rem',
                   fontWeight: 800,
                   textTransform: 'none',
-                  px: 1.1,
-                  py: 0.3,
-                  backgroundColor: classroomEra === 'edtech' ? '#0284c7' : 'transparent',
-                  color: classroomEra === 'edtech' ? '#ffffff' : '#94a3b8',
+                  px: 1.0,
+                  py: 0.28,
+                  backgroundColor: classroomEra === 'low_resource' ? '#0d9488' : 'transparent',
+                  color: classroomEra === 'low_resource' ? '#ffffff' : '#94a3b8',
                   '&:hover': {
-                    backgroundColor: classroomEra === 'edtech' ? '#0369a1' : 'rgba(255, 255, 255, 0.08)',
+                    backgroundColor: classroomEra === 'low_resource' ? '#0f766e' : 'rgba(255, 255, 255, 0.08)',
                   },
                 }}
               >
-                💻 EdTech (2026)
+                📱 Low-Tech
+              </Button>
+              <Button
+                variant={classroomEra === 'high_resource' || classroomEra === 'edtech' ? 'contained' : 'text'}
+                onClick={() => setClassroomEra('high_resource')}
+                startIcon={<EdTechIcon sx={{ fontSize: 14 }} />}
+                sx={{
+                  borderRadius: '6px !important',
+                  fontSize: '0.7rem',
+                  fontWeight: 800,
+                  textTransform: 'none',
+                  px: 1.0,
+                  py: 0.28,
+                  backgroundColor: (classroomEra === 'high_resource' || classroomEra === 'edtech') ? '#0284c7' : 'transparent',
+                  color: (classroomEra === 'high_resource' || classroomEra === 'edtech') ? '#ffffff' : '#94a3b8',
+                  '&:hover': {
+                    backgroundColor: '#0369a1',
+                  },
+                }}
+              >
+                💻 High-Tech
               </Button>
             </ButtonGroup>
           </Tooltip>

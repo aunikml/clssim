@@ -12,6 +12,7 @@ import { ClassroomCockpitDock } from '../features/classroom/ui/ClassroomCockpitD
 import { StudentInteractionOverlay } from '../features/classroom/ui/StudentInteractionOverlay';
 import { TeacherInteractionOverlay } from '../features/classroom/ui/TeacherInteractionOverlay';
 import { StudentDeviceModal } from '../features/classroom/ui/StudentDeviceModal';
+import { PlickersScanModal } from '../features/classroom/ui/PlickersScanModal';
 import { SessionAgendaModal } from '../features/classroom/ui/SessionAgendaModal';
 import { SessionReportCardModal } from '../features/classroom/ui/SessionReportCardModal';
 import { ClassroomHomePage } from '../features/classroom/ui/ClassroomHomePage';
@@ -127,6 +128,9 @@ export const App = () => {
 
       {/* Interactive Student Connected Device Inspection (Mirroring 4K Screen) */}
       <StudentDeviceModal />
+
+      {/* Plickers & Low-Resource Frugal Assessment Scanner Modal */}
+      <PlickersScanModal />
 
       {/* Session Agenda & Learning Objectives Modal */}
       <SessionAgendaModal />

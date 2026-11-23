@@ -256,7 +256,7 @@ class ClassroomAtmosphereAudioService {
     if (!ctx) return;
     const now = ctx.currentTime;
 
-    if (toEra === 'edtech') {
+    if (toEra === 'high_resource' || toEra === 'edtech') {
       // Ascending Digital Boot Arpeggio (C4 -> E4 -> G4 -> C5 -> E5 -> G5)
       const freqs = [261.63, 329.63, 392.0, 523.25, 659.25, 783.99];
       freqs.forEach((freq, idx) => {
@@ -274,6 +274,58 @@ class ClassroomAtmosphereAudioService {
         osc.start(now + idx * 0.06);
         osc.stop(now + idx * 0.06 + 0.38);
       });
+    } else if (toEra === 'low_resource') {
+      // Projector Lamp & Power-on Beep + Fan Spin-up (BEEP-BOOP 880Hz -> 1320Hz)
+      const beeps = [880, 1320];
+      beeps.forEach((freq, idx) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'square';
+        osc.frequency.setValueAtTime(freq, now + idx * 0.12);
+
+        gain.gain.setValueAtTime(0.0001, now + idx * 0.12);
+        gain.gain.linearRampToValueAtTime(0.035, now + idx * 0.12 + 0.01);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + idx * 0.12 + 0.09);
+
+        // Low-pass filter to soften the square wave beep
+        const filter = ctx.createBiquadFilter();
+        filter.type = 'lowpass';
+        filter.frequency.setValueAtTime(2200, now);
+
+        osc.connect(filter);
+        filter.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start(now + idx * 0.12);
+        osc.stop(now + idx * 0.12 + 0.1);
+      });
+
+      // Subtle projector fan whirl
+      setTimeout(() => {
+        const fanDuration = 0.8;
+        const bufferSize = ctx.sampleRate * fanDuration;
+        const buffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+        const data = buffer.getChannelData(0);
+        for (let i = 0; i < bufferSize; i++) {
+          data[i] = (Math.random() * 2 - 1) * 0.3;
+        }
+        const noise = ctx.createBufferSource();
+        noise.buffer = buffer;
+        const fanFilter = ctx.createBiquadFilter();
+        fanFilter.type = 'bandpass';
+        fanFilter.frequency.setValueAtTime(500, ctx.currentTime);
+        fanFilter.Q.setValueAtTime(2.0, ctx.currentTime);
+
+        const fanGain = ctx.createGain();
+        fanGain.gain.setValueAtTime(0.001, ctx.currentTime);
+        fanGain.gain.linearRampToValueAtTime(0.04, ctx.currentTime + 0.2);
+        fanGain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + fanDuration);
+
+        noise.connect(fanFilter);
+        fanFilter.connect(fanGain);
+        fanGain.connect(ctx.destination);
+        noise.start(ctx.currentTime);
+        noise.stop(ctx.currentTime + fanDuration);
+      }, 240);
     } else {
       // Traditional Classroom Mechanical Latch + Chalk Tap
       const osc = ctx.createOscillator();

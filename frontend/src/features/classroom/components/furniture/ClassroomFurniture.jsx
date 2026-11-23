@@ -4,6 +4,7 @@ import { StudentDesk } from './StudentDesk';
 import { TeacherDesk } from './TeacherDesk';
 import { Blackboard } from './Blackboard';
 import { DigitalSmartScreen } from './DigitalSmartScreen';
+import { BudgetProjectorScreen } from './BudgetProjectorScreen';
 import { StandingWhiteboard } from './StandingWhiteboard';
 import { Bookshelf } from './Bookshelf';
 import { WallDecorations } from './WallDecorations';
@@ -34,7 +35,7 @@ export const ClassroomFurniture = () => {
 
   return (
     <group>
-      {/* 1. Teaching Area at Front (-Z) - Toggleable between Traditional Chalkboard and Digital Smart Screen + Whiteboard */}
+      {/* 1. Teaching Area at Front (-Z) - 3-Way Mode: Traditional Chalkboard vs Low-Resource Projector vs 4K Digital Screen */}
       {teachingDisplayMode === 'digital_screen' ? (
         <>
           {/* High-Tech 4K Digital Presentation Smart Screen */}
@@ -46,6 +47,23 @@ export const ClassroomFurniture = () => {
 
           {/* Mobile Standing Dry-Erase Whiteboard with Clinical Cardiology Notes */}
           <StandingWhiteboard position={[3.3, 0, -5.4]} rotation={[0, -0.45, 0]} />
+        </>
+      ) : teachingDisplayMode === 'projector_screen' ? (
+        <>
+          {/* Blackboard in background */}
+          <Blackboard
+            position={config.teaching_area?.blackboard?.position || [0, 2.4, -7.85]}
+            width={config.teaching_area?.blackboard?.width || 7.2}
+            height={config.teaching_area?.blackboard?.height || 2.4}
+          />
+
+          {/* Budget Projector & Pull-down Screen in Foreground */}
+          <BudgetProjectorScreen
+            screenPosition={[0, 2.4, -7.78]}
+            screenWidth={5.8}
+            screenHeight={2.45}
+            projectorPosition={[0, 4.3, -2.2]}
+          />
         </>
       ) : (
         <>
