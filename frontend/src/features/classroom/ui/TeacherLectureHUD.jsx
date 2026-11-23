@@ -467,7 +467,7 @@ export const TeacherLectureHUD = () => {
           >
             <CheckIcon sx={{ color: '#10b981', fontSize: 40, mb: 0.5 }} />
             <Typography variant="subtitle1" fontWeight="bold" sx={{ color: '#ffffff' }}>
-              Cardiology Practicum Completed!
+              Grade 8 Circulatory System Lesson Completed!
             </Typography>
             <Typography variant="body2" sx={{ color: '#cbd5e1', mt: 0.5, mb: 1.5, fontSize: '12px' }}>
               Great job! You completed the 5-minute masterclass on Cardiovascular System & Anatomy of the Human Heart and tested student understanding.

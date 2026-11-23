@@ -44,10 +44,10 @@ export const PlickersScanModal = () => {
   const currentDeg = orientationDegrees[cardOrientation] || 0;
 
   const choices = [
-    { key: 'A', text: 'Tricuspid Valve', count: 4 },
-    { key: 'B', text: 'Pulmonary Semilunar Valve (Correct)', count: 14, isCorrect: true },
-    { key: 'C', text: 'Mitral / Bicuspid Valve', count: 1 },
-    { key: 'D', text: 'Aortic Semilunar Valve', count: 1 },
+    { key: 'A', text: 'Left Ventricle (Pumps to head & toes)', count: 14, isCorrect: true },
+    { key: 'B', text: 'Right Atrium (Receives used blood from body)', count: 3 },
+    { key: 'C', text: 'Right Ventricle (Pumps short distance to lungs)', count: 2 },
+    { key: 'D', text: 'Left Atrium (Receives fresh blood from lungs)', count: 1 },
   ];
 
   return (

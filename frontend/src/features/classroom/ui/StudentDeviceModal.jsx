@@ -261,7 +261,7 @@ export const StudentDeviceModal = () => {
         {/* Footer device info */}
         <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mt: 1.5, px: 0.5 }}>
           <Typography variant="caption" sx={{ color: '#64748b' }}>
-            Current Topic: <strong style={{ color: '#38bdf8' }}>{lectureTopic || 'Cardiology Masterclass'}</strong>
+            Current Topic: <strong style={{ color: '#38bdf8' }}>{lectureTopic || 'Grade 8 Circulatory System'}</strong>
           </Typography>
           <Typography variant="caption" sx={{ color: '#64748b' }}>
             Press <strong style={{ color: '#cbd5e1' }}>Esc</strong> to exit device inspection

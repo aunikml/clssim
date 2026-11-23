@@ -556,7 +556,7 @@ class BlackboardService {
     ctx.fillStyle = '#fef08a'; // Chalk yellow
     ctx.font = 'bold 44px "Fredoka", "Inter", sans-serif';
     ctx.textAlign = 'center';
-    ctx.fillText(`📝 CARDIOLOGY ASSESSMENT: QUESTION ${questionIndex + 1} OF ${totalQ}`, w / 2, 75);
+    ctx.fillText(`📝 GRADE 8 LIFE SCIENCE: QUESTION ${questionIndex + 1} OF ${totalQ}`, w / 2, 75);
 
     ctx.strokeStyle = 'rgba(255, 255, 255, 0.4)';
     ctx.lineWidth = 3;
@@ -621,7 +621,7 @@ class BlackboardService {
 
       ctx.fillStyle = '#86efac';
       ctx.font = 'bold 26px "Inter", sans-serif';
-      ctx.fillText(`✍️ STUDENT CLINICAL REASONING (${studentName}):`, 150, boxY + 45);
+      ctx.fillText(`✍️ STUDENT SCIENCE REASONING (${studentName}):`, 150, boxY + 45);
 
       ctx.fillStyle = '#ffffff';
       ctx.font = '24px "Inter", sans-serif';
@@ -641,7 +641,7 @@ class BlackboardService {
       }
       ctx.fillText(aLine, 150, aY);
 
-      // Formula Card
+      // Energy Demand Principle Card
       const formulaY = boxY + 205;
       ctx.strokeStyle = '#fde047';
       ctx.fillStyle = 'rgba(253, 224, 71, 0.12)';
@@ -649,17 +649,17 @@ class BlackboardService {
       ctx.strokeRect(120, formulaY, w - 240, 120);
 
       ctx.fillStyle = '#fde047';
-      ctx.font = 'bold 28px "Inter", monospace';
-      ctx.fillText("LAPLACE'S LAW: Wall Stress (σ) = (P × r) / (2 × h)", 150, formulaY + 45);
+      ctx.font = 'bold 26px "Inter", monospace';
+      ctx.fillText("SCIENCE PRINCIPLE: EXERCISE & CELLULAR ENERGY DEMAND", 150, formulaY + 45);
 
       ctx.fillStyle = '#cbd5e1';
       ctx.font = '22px "Inter", sans-serif';
-      ctx.fillText('• Systemic HTN elevates LV Afterload (140-180 mmHg) ➔ LV wall thickness (h) increases', 150, formulaY + 80);
-      ctx.fillText('• Pulmonary resistance is low (~25 mmHg) ➔ RV is spared unless secondary failure occurs', 150, formulaY + 110);
+      ctx.fillText('• Working muscles consume extra Oxygen (O₂) and Glucose (sugar) to make movement energy', 150, formulaY + 80);
+      ctx.fillText('• Heart beats faster to pump fresh blood, and lungs breathe faster to remove CO₂ waste!', 150, formulaY + 110);
 
     } else if (questionObj.type === 'graph_builder') {
       // -----------------------------------------------------------------------
-      // QUESTION 5 (GRAPH BUILDER) ON BLACKBOARD
+      // QUESTION 5 (GRAPH / FLOW BUILDER) ON BLACKBOARD
       // -----------------------------------------------------------------------
       const gx = 140;
       const gy = startY + 25;
@@ -678,17 +678,16 @@ class BlackboardService {
       // Axis Titles
       ctx.fillStyle = '#38bdf8';
       ctx.font = 'bold 22px "Inter", sans-serif';
-      ctx.fillText('Pressure (mmHg)', gx + 20, gy + 20);
+      ctx.fillText('Blood Pressure & Speed', gx + 20, gy + 20);
 
-      // Y-axis ticks (0, 40, 80, 120 mmHg)
+      // Y-axis ticks (High, Med, Low)
       const yTicks = [
-        { label: '120', y: gy + 60 },
-        { label: '80', y: gy + 140 },
-        { label: '40', y: gy + 220 },
-        { label: '0', y: gy + gh - 40 },
+        { label: 'High', y: gy + 70 },
+        { label: 'Med', y: gy + 170 },
+        { label: 'Low', y: gy + gh - 60 },
       ];
       ctx.fillStyle = '#94a3b8';
-      ctx.font = '20px monospace';
+      ctx.font = 'bold 20px "Inter", sans-serif';
       yTicks.forEach((yt) => {
         ctx.fillText(yt.label, gx + 15, yt.y + 6);
         ctx.beginPath();
@@ -699,48 +698,46 @@ class BlackboardService {
 
       // X-axis stations
       const stations = [
-        { name: 'Aorta', x: gx + 140 },
-        { name: 'Arteries', x: gx + 360 },
-        { name: 'Arterioles', x: gx + 640, isDrop: true },
-        { name: 'Capillaries', x: gx + 940 },
-        { name: 'Venules', x: gx + 1200 },
-        { name: 'Vena Cava', x: gx + 1450 },
+        { name: 'Heart (Pump)', x: gx + 140 },
+        { name: 'Arteries (Away)', x: gx + 420 },
+        { name: 'Capillaries (Deliver O₂)', x: gx + 820, isDrop: true },
+        { name: 'Veins (Valves / Return)', x: gx + 1250 },
       ];
       stations.forEach((st) => {
-        ctx.fillStyle = st.isDrop ? '#f87171' : '#cbd5e1';
+        ctx.fillStyle = st.isDrop ? '#38bdf8' : '#cbd5e1';
         ctx.font = st.isDrop ? 'bold 22px "Inter", sans-serif' : '20px "Inter", sans-serif';
-        ctx.fillText(st.name, st.x - 30, gy + gh - 10);
+        ctx.fillText(st.name, st.x - 40, gy + gh - 10);
       });
 
       // Chalk Dynamic Pressure Curve
       ctx.strokeStyle = '#fde047';
       ctx.lineWidth = 5;
       ctx.beginPath();
-      ctx.moveTo(gx + 60, gy + 75); // Aorta 120/80 wave
-      ctx.bezierCurveTo(gx + 220, gy + 60, gx + 280, gy + 90, gx + 360, gy + 78); // Arteries
-      ctx.bezierCurveTo(gx + 480, gy + 90, gx + 540, gy + 110, gx + 600, gy + 130); // Pre-arteriole
-      ctx.lineTo(gx + 720, gy + 230); // STEEP ARTERIOLAR DROP (85 -> 35 mmHg)
-      ctx.bezierCurveTo(gx + 840, gy + 250, gx + 900, gy + 270, gx + 980, gy + 280); // Capillaries
-      ctx.bezierCurveTo(gx + 1100, gy + 290, gx + 1300, gy + gh - 55, gx + 1480, gy + gh - 50); // Venous return
+      ctx.moveTo(gx + 60, gy + 75); // Heart high pulse
+      ctx.bezierCurveTo(gx + 220, gy + 65, gx + 320, gy + 85, gx + 420, gy + 80); // Arteries
+      ctx.bezierCurveTo(gx + 600, gy + 120, gx + 700, gy + 210, gx + 820, gy + 220); // Capillaries
+      ctx.bezierCurveTo(gx + 980, gy + 230, gx + 1150, gy + gh - 55, gx + 1380, gy + gh - 50); // Veins
       ctx.stroke();
 
-      // Steepest Drop Chalk Callout
-      ctx.strokeStyle = '#f87171';
-      ctx.fillStyle = 'rgba(248, 113, 113, 0.2)';
+      // Capillaries Delivery Callout Box
+      ctx.strokeStyle = '#38bdf8';
+      ctx.fillStyle = 'rgba(56, 189, 248, 0.2)';
       ctx.lineWidth = 2.5;
-      ctx.fillRect(gx + 540, gy + 145, 340, 75);
-      ctx.strokeRect(gx + 540, gy + 145, 340, 75);
+      ctx.fillRect(gx + 680, gy + 60, 420, 100);
+      ctx.strokeRect(gx + 680, gy + 60, 420, 100);
 
-      ctx.fillStyle = '#f87171';
+      ctx.fillStyle = '#38bdf8';
       ctx.font = 'bold 22px "Inter", sans-serif';
-      ctx.fillText('★ STEEPEST DROP (ARTERIOLES)', gx + 555, gy + 175);
-      ctx.fillStyle = '#fef08a';
-      ctx.font = 'bold 18px monospace';
-      ctx.fillText('85 ➔ 35 mmHg (~60% Total TPR)', gx + 555, gy + 203);
+      ctx.fillText('🔬 CAPILLARY EXCHANGE STOP:', gx + 700, gy + 95);
+      ctx.fillStyle = '#ffffff';
+      ctx.font = '18px "Inter", sans-serif';
+      ctx.fillText('• Blood slows down to drop off Oxygen & Nutrients', gx + 700, gy + 125);
+      ctx.fillText('• Collects Carbon Dioxide waste before entering Veins!', gx + 700, gy + 150);
+      ctx.stroke();
 
       ctx.fillStyle = '#86efac';
       ctx.font = 'italic 22px "Inter", sans-serif';
-      ctx.fillText(`Graph plotted by ${studentName} (${studentSeat}) · Arteriolar resistance protects fragile capillaries.`, gx + 60, gy + gh + 35);
+      ctx.fillText(`Vascular highway order plotted by ${studentName} (${studentSeat}) · Blood flows Heart ➔ Arteries ➔ Capillaries ➔ Veins!`, gx + 60, gy + gh + 35);
 
     } else {
       // -----------------------------------------------------------------------

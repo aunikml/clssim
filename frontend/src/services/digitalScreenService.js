@@ -262,18 +262,18 @@ class DigitalScreenService {
 
     ctx.fillStyle = '#38bdf8';
     ctx.font = 'bold 14px system-ui, sans-serif';
-    ctx.fillText('ST. JUDE MEDICAL ACADEMY · DIVISION OF CARDIOLOGY', 96, 157);
+    ctx.fillText('GRADE 8 LIFE SCIENCE · MIDDLE SCHOOL CURRICULUM', 96, 157);
 
     // Main Presentation Title
     ctx.fillStyle = '#ffffff';
     ctx.font = 'bold 44px system-ui, sans-serif';
     ctx.fillText('HUMAN CIRCULATORY SYSTEM', 80, 230);
-    ctx.fillText('& CARDIAC ANATOMY', 80, 285);
+    ctx.fillText('& THE HEART', 80, 285);
 
     // Subtitle
     ctx.fillStyle = '#94a3b8';
     ctx.font = '20px system-ui, sans-serif';
-    ctx.fillText('5-Minute Interactive Clinical Masterclass · Hemodynamics & Chamber Dynamics', 80, 335);
+    ctx.fillText('5-Minute Interactive Science Lesson · The Heart & Double-Loop Circulation', 80, 335);
 
     // Faculty Lecturer Profile Card
     ctx.fillStyle = 'rgba(30, 41, 59, 0.75)';
@@ -290,17 +290,17 @@ class DigitalScreenService {
     ctx.fill();
     ctx.fillStyle = '#ffffff';
     ctx.font = 'bold 24px system-ui, sans-serif';
-    ctx.fillText('MD', 117, 438);
+    ctx.fillText('SCI', 117, 438);
 
     ctx.fillStyle = '#f8fafc';
     ctx.font = 'bold 22px system-ui, sans-serif';
-    ctx.fillText('Prof. John H. Watson, MD, FACC', 190, 418);
+    ctx.fillText('Teacher John · Grade 8 Science', 190, 418);
     ctx.fillStyle = '#38bdf8';
     ctx.font = '16px system-ui, sans-serif';
-    ctx.fillText('Attending Cardiologist · Chair of Clinical Physiology & Simulation', 190, 444);
+    ctx.fillText('Middle School Life Science · Interactive Classroom Simulator', 190, 444);
     ctx.fillStyle = '#94a3b8';
     ctx.font = '14px monospace';
-    ctx.fillText('Lecture Topic: 3 Core Pillars · 4 Valves & 3× LV Myocardium · Figure-8 Circuit', 190, 466);
+    ctx.fillText('Topic: The Pump (Heart), The Pipes (Vessels) & Double-Loop Circuit', 190, 466);
 
     // Interactive PowerPoint Launch Button (Pulsing Glow)
     const btnPulse = 0.85 + 0.15 * Math.sin(t * 3.5);
@@ -355,21 +355,21 @@ class DigitalScreenService {
         num: 'POINT 1',
         time: '0:00 – 1:40',
         title: 'What is the Circulatory System?',
-        desc: '60,000-mile vascular network: Heart (Pump), Vessels (Highway) & Blood (Fluid) + Capillary Diffusion',
+        desc: 'The body’s delivery highway: The Pump (Heart), Pipes (Vessels) & Delivery Trucks (Blood Cells)',
         color: '#38bdf8',
       },
       {
         num: 'POINT 2',
         time: '1:40 – 3:20',
-        title: 'Anatomical Parts of the Heart',
-        desc: '4 Chambers, 4 Valves, 3× Myocardium Wall Thickness in Left Ventricle (120 mmHg) & Great Vessels',
+        title: 'Parts of the Human Heart',
+        desc: '4 Chambers (2 Atria, 2 Ventricles), 4 One-Way Trapdoor Valves & Strong Left Ventricle',
         color: '#f43f5e',
       },
       {
         num: 'POINT 3',
         time: '3:20 – 5:00',
         title: 'The Journey of Blood',
-        desc: 'Figure-8 Dual Circulation: Pulmonary loop (lungs O₂ pickup) & Systemic loop (body delivery)',
+        desc: 'Double-Loop Circuit: Loop 1 to lungs for fresh oxygen, Loop 2 to entire body organs',
         color: '#a855f7',
       },
     ];

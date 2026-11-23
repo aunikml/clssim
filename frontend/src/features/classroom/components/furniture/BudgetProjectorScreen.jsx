@@ -48,19 +48,19 @@ export const BudgetProjectorScreen = ({
 
       ctx.fillStyle = '#ffffff';
       ctx.font = 'bold 24px Inter, system-ui, sans-serif';
-      ctx.fillText('📱 LOW-RESOURCE ACTIVE CLASSROOM: PLICKERS & ONE-SCREEN TECH', 40, 58);
+      ctx.fillText('📱 LOW-RESOURCE GRADE 8 SCIENCE: ONE-SCREEN ACTIVE INQUIRY', 40, 58);
 
       // 3. Question & Scenario
       ctx.fillStyle = '#f8fafc';
-      ctx.font = 'bold 26px Inter, system-ui, sans-serif';
-      ctx.fillText('Formative Check: Which valve prevents blood backflow into the Right Ventricle?', 40, 130);
+      ctx.font = 'bold 24px Inter, system-ui, sans-serif';
+      ctx.fillText('Pop Quiz Q1: Which chamber has the thickest muscle wall to pump blood to your entire body?', 40, 130);
 
       // 4. Multiple Choice Options (A, B, C, D)
       const options = [
-        { key: 'A', text: 'Tricuspid Valve', count: 4 },
-        { key: 'B', text: 'Pulmonary Semilunar Valve (Correct)', count: 14, isCorrect: true },
-        { key: 'C', text: 'Mitral / Bicuspid Valve', count: 1 },
-        { key: 'D', text: 'Aortic Semilunar Valve', count: 1 },
+        { key: 'A', text: 'Left Ventricle (Pumps blood all the way to head & toes)', count: 14, isCorrect: true },
+        { key: 'B', text: 'Right Atrium (Receives used oxygen-poor blood from body)', count: 3 },
+        { key: 'C', text: 'Right Ventricle (Only pumps a short distance to lungs)', count: 2 },
+        { key: 'D', text: 'Left Atrium (Receives fresh blood from lungs)', count: 1 },
       ];
 
       options.forEach((opt, idx) => {

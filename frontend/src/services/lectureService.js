@@ -9,68 +9,68 @@ export const HEART_ANATOMY_QUIZ = [
     type: 'multiple_choice',
     studentName: 'Sophia Garcia',
     studentSeat: 'Row 2, Seat 2',
-    question: "Which chamber of the human heart possesses the thickest muscular wall to pump oxygenated blood to the entire systemic circulation?",
+    question: "Which chamber of the human heart has the thickest, strongest muscular wall to pump fresh, oxygen-rich blood all the way through your body?",
     options: [
-      "A. Left Ventricle (thick myocardium to overcome high systemic vascular resistance)",
-      "B. Right Atrium (receives deoxygenated blood from the vena cavae)",
-      "C. Right Ventricle (pumps blood to the low-pressure pulmonary circuit)",
-      "D. Left Atrium (receives oxygenated blood from pulmonary veins)",
+      "A. Left Ventricle (strongest chamber because it pumps blood all the way to your brain and toes!)",
+      "B. Right Atrium (receives used oxygen-poor blood from the body)",
+      "C. Right Ventricle (only pumps a short distance over to the lungs)",
+      "D. Left Atrium (receives fresh blood from the lungs)",
     ],
     correctIndex: 0,
-    studentAnswerText: "Option A: Left Ventricle (thick myocardium to overcome high systemic vascular resistance)",
-    explanation: "The left ventricle myocardium is three times thicker than the right ventricle because it must generate high systolic arterial pressure (~120 mmHg) to pump blood through the aorta to the entire systemic body.",
+    studentAnswerText: "Option A: Left Ventricle (strongest chamber because it pumps blood all the way to your brain and toes!)",
+    explanation: "The left ventricle has the thickest muscle wall because it must pump blood through the aorta to your entire body, whereas the right ventricle only pumps a short distance to your lungs.",
   },
   {
     id: 2,
     type: 'multiple_choice',
     studentName: 'Ethan Vance',
     studentSeat: 'Row 3, Seat 5',
-    question: "Which anatomical valve prevents the backflow of blood from the left ventricle into the left atrium during ventricular systole?",
+    question: "What is the main job of the one-way valves inside your heart?",
     options: [
-      "A. Bicuspid (Mitral) Valve (anchored by chordae tendineae)",
-      "B. Tricuspid Valve (located between right atrium and ventricle)",
-      "C. Aortic Semilunar Valve (guards exit to aorta)",
-      "D. Pulmonary Semilunar Valve (guards exit to pulmonary trunk)",
+      "A. To keep blood flowing forward in one direction and stop it from leaking backwards",
+      "B. To clean germs and bacteria out of the bloodstream",
+      "C. To add oxygen gas directly into your blood cells",
+      "D. To make your heart beat faster when you run",
     ],
     correctIndex: 0,
-    studentAnswerText: "Option A: Bicuspid (Mitral) Valve (anchored by chordae tendineae)",
-    explanation: "The bicuspid (mitral) valve is located between the left atrium and left ventricle. Its cusps close tightly during ventricular contraction to prevent systolic regurgitation into the atrium.",
+    studentAnswerText: "Option A: To keep blood flowing forward in one direction and stop it from leaking backwards",
+    explanation: "Heart valves act like one-way trapdoors. When ventricles squeeze, the valves snap shut to make sure blood only travels forward and cannot flow backward.",
   },
   {
     id: 3,
     type: 'multiple_choice',
     studentName: 'Classroom Collective',
     studentSeat: 'Whole Class Desks',
-    question: "Which specialized intrinsic cardiac cluster is known as the natural primary pacemaker of the heart, initiating the electrical action potential?",
+    question: "When a doctor or nurse listens to your heart with a stethoscope, what creates the familiar 'lub-dub' sound?",
     options: [
-      "A. Sinoatrial (SA) Node (located in the superior right atrium)",
-      "B. Atrioventricular (AV) Node (provides the critical 0.1s conduction delay)",
-      "C. Atrioventricular Bundle of His (conducts down interventricular septum)",
-      "D. Purkinje Fibers (distributes impulse upward through myocardium)",
+      "A. The heart valves snapping shut as the chambers squeeze and relax",
+      "B. Blood splashing against the ribs and lungs",
+      "C. Air rushing in and out of the windpipe",
+      "D. Muscle cramps inside the chest",
     ],
     correctIndex: 0,
-    studentAnswerText: "Option A: Sinoatrial (SA) Node (spontaneously sets 60-100 bpm rhythm)",
-    explanation: "The Sinoatrial (SA) node acts as the heart's natural pacemaker, spontaneously generating rhythmic action potentials at 60 to 100 beats per minute to set the primary sinus rhythm.",
+    studentAnswerText: "Option A: The heart valves snapping shut as the chambers squeeze and relax",
+    explanation: "The 'lub' sound happens when the valves between atria and ventricles snap shut, and the 'dub' sound happens when the exit valves snap shut right after!",
   },
   {
     id: 4,
     type: 'open_ended',
     studentName: 'Liam Patel',
     studentSeat: 'Row 1, Seat 3',
-    question: "Clinical Physiology Inquiry: Why does chronic systemic arterial hypertension cause Left Ventricular Hypertrophy (LVH) rather than Right Ventricular Hypertrophy? Explain the hemodynamic afterload mechanism.",
-    sampleAnswer: "Chronic systemic hypertension drastically elevates Left Ventricular afterload (~140-180 mmHg). By Laplace's Law (Wall Stress = P·r / 2h), myocytes hypertrophy concentrically to normalize wall tension. The pulmonary circuit remains low resistance (~25 mmHg), sparing the Right Ventricle.",
-    studentAnswerText: "Chronic hypertension elevates LV afterload (140-180 mmHg). Via Laplace's Law (Wall Stress = P·r / 2h), myocytes hypertrophy to normalize wall stress, while the pulmonary circuit RV is spared (~25 mmHg).",
-    explanation: "Elevated systemic vascular resistance dramatically increases LV afterload. Following Laplace's Law (σ = P·r / 2h), the LV myocardium undergoes concentric hypertrophy to maintain normal systolic wall stress, whereas pulmonary pressures remain low (~25 mmHg), sparing the right ventricle.",
+    question: "Science Inquiry: Why do your heart rate and breathing rate increase when you are sprinting in gym class?",
+    sampleAnswer: "When you run, your working muscle cells need more oxygen and energy (glucose) to keep contracting. Your heart beats faster to pump more oxygen-rich blood, and your lungs breathe faster to take in oxygen and exhale carbon dioxide waste!",
+    studentAnswerText: "When we sprint, our leg muscle cells burn more energy and need extra oxygen. Our heart beats faster to deliver oxygen-rich blood and remove carbon dioxide waste!",
+    explanation: "During exercise, cellular respiration in muscle cells ramps up. The heart accelerates to supply oxygen and glucose while removing CO2 and metabolic heat.",
   },
   {
     id: 5,
     type: 'graph_builder',
     studentName: 'Ethan Vance',
     studentSeat: 'Row 3, Seat 1',
-    question: "Cardiovascular Hemodynamics Plotter: Plot the dynamic blood pressure gradient across the vascular highway (Aorta ➔ Large Arteries ➔ Arterioles ➔ Capillaries ➔ Venules ➔ Vena Cava). Where is the steepest resistance drop?",
-    sampleAnswer: "The steepest pressure gradient drop occurs across Arterioles (~85 down to ~35 mmHg, accounting for ~60% of Total Peripheral Resistance) due to vascular smooth muscle resistance, protecting delicate capillaries.",
-    studentAnswerText: "The steepest pressure gradient drop occurs across the Arterioles (from ~85 down to ~35 mmHg, accounting for ~60% of Total Peripheral Resistance) due to vascular smooth muscle resistance.",
-    explanation: "The arterioles are the primary resistance vessels of the systemic circulation, contributing ~60% of Total Peripheral Resistance (TPR). Pressure falls precipitously from ~85 mmHg to ~35 mmHg before entering thin-walled capillaries.",
+    question: "Vascular Highway Order: Trace the correct order of blood vessels blood travels through after leaving the heart: Arteries, Capillaries, or Veins?",
+    sampleAnswer: "Heart ➔ Arteries (thick, elastic walls carrying blood Away under high pressure) ➔ Capillaries (microscopic 1-cell thick tubes for oxygen delivery) ➔ Veins (lower pressure tubes with one-way valves returning to the heart)!",
+    studentAnswerText: "Heart ➔ Arteries (carry blood Away) ➔ Capillaries (tiny exchange tubes) ➔ Veins (valves return blood back to the heart)!",
+    explanation: "Arteries carry blood Away from the heart under high pressure; capillaries allow oxygen and nutrients to diffuse into cells; veins bring blood back to the heart!",
   },
 ];
 
@@ -82,8 +82,8 @@ export const LECTURE_SECTIONS = [
     id: 'point1_intro',
     point: 1,
     pointLabel: 'Point 1: Circulatory System',
-    title: '1A. Vascular Highway & 3 Pillars',
-    subtext: 'The Pump (Heart), The Highway & Fluid (Blood)',
+    title: '1A. The 24/7 Delivery Highway',
+    subtext: 'The Pump (Heart), The Pipes (Vessels) & Fluid (Blood)',
     startSec: 0,
     endSec: 50,
     timeLabel: '0:00',
@@ -93,8 +93,8 @@ export const LECTURE_SECTIONS = [
     id: 'point1_capillary',
     point: 1,
     pointLabel: 'Point 1: Circulatory System',
-    title: '1B. Capillary Diffusion',
-    subtext: 'Endothelial O₂/CO₂ Gas Exchange (<1mm/s)',
+    title: '1B. Capillary Delivery Stops',
+    subtext: 'Dropping off Oxygen (O₂) & Picking up Carbon Dioxide (CO₂)',
     startSec: 50,
     endSec: 100,
     timeLabel: '0:50',
@@ -104,8 +104,8 @@ export const LECTURE_SECTIONS = [
     id: 'point2_chambers',
     point: 2,
     pointLabel: 'Point 2: Parts of the Heart',
-    title: '2A. The 4 Cardiac Chambers',
-    subtext: 'Right & Left Atria & Ventricles Segregation',
+    title: '2A. The 4 Heart Chambers',
+    subtext: '2 Atria (Receivers) & 2 Ventricles (Pumps)',
     startSec: 100,
     endSec: 125,
     timeLabel: '1:40',
@@ -115,8 +115,8 @@ export const LECTURE_SECTIONS = [
     id: 'point2_myocardium',
     point: 2,
     pointLabel: 'Point 2: Parts of the Heart',
-    title: '2B. LV 3× Myocardium Wall',
-    subtext: '12-15mm Muscle vs 3-5mm RV · 120 mmHg Force',
+    title: '2B. Left Ventricle: Powerful Body Pump',
+    subtext: 'Pumping blood all the way from your head to your toes!',
     startSec: 125,
     endSec: 150,
     timeLabel: '2:05',
@@ -126,8 +126,8 @@ export const LECTURE_SECTIONS = [
     id: 'point2_valves',
     point: 2,
     pointLabel: 'Point 2: Parts of the Heart',
-    title: '2C. The 4 One-Way Valves',
-    subtext: 'Tricuspid, Mitral, Chordae Tendineae Strings',
+    title: '2C. One-Way Trapdoor Valves',
+    subtext: 'Tricuspid & Bicuspid Valves stop blood flowing backward',
     startSec: 150,
     endSec: 175,
     timeLabel: '2:30',
@@ -137,8 +137,8 @@ export const LECTURE_SECTIONS = [
     id: 'point2_acoustics',
     point: 2,
     pointLabel: 'Point 2: Parts of the Heart',
-    title: '2D. Great Vessels & "Lub-Dub"',
-    subtext: 'Aorta, Vena Cava & S1/S2 Acoustic Closures',
+    title: '2D. The "Lub-Dub" Heartbeat',
+    subtext: 'What you hear in a stethoscope when valves snap shut',
     startSec: 175,
     endSec: 200,
     timeLabel: '2:55',
@@ -147,9 +147,9 @@ export const LECTURE_SECTIONS = [
   {
     id: 'point3_pulmonary',
     point: 3,
-    pointLabel: 'Point 3: Journey of Blood',
-    title: '3A. Pulmonary Loop (Steps 1–4)',
-    subtext: 'Vena Cava ➔ RA ➔ RV ➔ Lungs O₂ Pickup',
+    pointLabel: 'Point 3: Double Loop Journey',
+    title: '3A. Loop 1: Heart to Lungs (O₂ Pickup)',
+    subtext: 'Right side of the heart sends blue blood to get fresh oxygen',
     startSec: 200,
     endSec: 250,
     timeLabel: '3:20',
@@ -158,9 +158,9 @@ export const LECTURE_SECTIONS = [
   {
     id: 'point3_systemic',
     point: 3,
-    pointLabel: 'Point 3: Journey of Blood',
-    title: '3B. Systemic Loop (Steps 5–8)',
-    subtext: 'Pulm. Veins ➔ LA ➔ LV ➔ Aorta ➔ Body Organs',
+    pointLabel: 'Point 3: Double Loop Journey',
+    title: '3B. Loop 2: Heart to Body (Oxygen Delivery)',
+    subtext: 'Left side of the heart propels red blood through the Aorta',
     startSec: 250,
     endSec: 300,
     timeLabel: '4:10',
@@ -170,8 +170,8 @@ export const LECTURE_SECTIONS = [
     id: 'qa_assessment',
     point: 4,
     pointLabel: 'Assessment & Pop Quiz',
-    title: '4. Cardiology Q&A Quiz',
-    subtext: '3 Interactive Desk Worksheet Questions',
+    title: '4. Grade 8 Science Pop Quiz',
+    subtext: '5 Interactive Worksheet & Card Check Questions',
     startSec: 300,
     endSec: 300,
     timeLabel: '5:00',
@@ -184,57 +184,57 @@ export const LECTURE_SCRIPT_PARTS = [
     startSec: 0,
     stage: 1,
     topic: '1. What is the Circulatory System?',
-    transcript: 'Point 1: The Circulatory System is our body’s 60,000-mile vascular network comprising the Pump (Heart), the Highway (Arteries, Veins, Capillaries), and the Fluid (Blood) delivering oxygen and nutrients to every cell.',
-    voice: 'Good morning, class! Today we begin our five-minute masterclass on the human circulatory system and the anatomy of the heart. Our first foundational point is: What is the circulatory system? Imagine a vast sixty-thousand-mile superhighway within you. The circulatory system is the master distribution network responsible for transporting oxygen, glucose, hormones, and immune cells to all forty trillion cells in your body, while carrying away carbon dioxide and metabolic waste. It relies on three primary pillars: first, the muscular pump—our heart; second, the vascular highways consisting of thick muscular arteries carrying blood under high pressure away from the heart, elastic veins equipped with one-way valves guiding blood back, and microscopic capillaries where nutrient exchange occurs; and third, the fluid itself—blood. Look at the display: notice how the capillary matrix enables oxygen to diffuse seamlessly into active tissues.',
+    transcript: 'Point 1: The Circulatory System is our body’s delivery network consisting of the Pump (Heart), the Pipes (Arteries, Veins, Capillaries), and the Fluid (Blood) delivering oxygen and nutrients to all 37 trillion cells.',
+    voice: 'Good morning, class! Today we are learning how our human heart and circulatory system work together like a 24/7 delivery service for all 37 trillion cells in your body. Our first big question is: What is the circulatory system? Imagine a vast highway inside you. Your cells need fresh oxygen and food to stay alive, and they produce waste like carbon dioxide that must be carried away. The circulatory system relies on three main parts: first, the muscular pump—our heart; second, the pipes—thick arteries carrying blood away from the heart, veins bringing it back, and tiny capillaries where deliveries happen; and third, the delivery trucks—our blood cells!',
   },
   {
     startSec: 50,
     stage: 1,
-    topic: '1. Circulatory System: Capillary Diffusion & Microcirculation',
-    transcript: 'Capillary beds: Microscopic vessels (5-8 µm) where oxygen and nutrients diffuse across thin endothelial walls into tissue cells, collecting CO2 and metabolic wastes into venules.',
-    voice: 'Take a close look at the capillary exchange schematic on your display. Blood flow slows down dramatically here to less than one millimeter per second. This critical slowdown allows red blood cells to pass through in single file, unloading oxygen through the delicate endothelial membrane while absorbing metabolic carbon dioxide. Without this continuous microvascular transport, our cells would perish within minutes.',
+    topic: '1. Circulatory System: Capillary Delivery Stops',
+    transcript: 'Capillaries: Microscopic blood vessels so narrow that red blood cells must travel in single file, dropping off oxygen and nutrients while picking up carbon dioxide waste from your cells.',
+    voice: 'Take a look at the capillary diagram on the screen. Capillaries are microscopic vessels so tiny that red blood cells have to line up in single file! This is where the magic happens: oxygen and sugar pass through the thin walls into your body cells, and carbon dioxide waste is collected to be carried away.',
   },
   {
     startSec: 100,
     stage: 2,
-    topic: '2. Anatomical Parts of the Human Heart',
-    transcript: 'Point 2: Parts of the Heart. A four-chambered double pump: Right Atrium & Ventricle (pulmonary side), Left Atrium & Ventricle (systemic side). The Left Ventricle has a 3× thicker myocardium (12-15mm) to generate 120 mmHg systolic pressure!',
-    voice: 'Now, moving to our second point: The anatomical parts of the human heart. Your heart is a muscular organ roughly the size of your clenched fist, located in the thoracic cavity behind the sternum. Internally, it is divided into four distinct hollow chambers: two upper receiving chambers called atria, and two lower muscular pumping chambers called ventricles. Look at the anatomical cross-section on your screen: the right side—colored blue—handles deoxygenated blood, while the left side—colored red—handles oxygen-rich blood. Notice the critical difference in wall thickness: the left ventricle myocardium is three times thicker than the right ventricle! Why? Because while the right ventricle only needs to pump blood a few inches into the low-pressure lungs, the left ventricle must generate enough hydraulic force—around one hundred and twenty millimeters of mercury—to shoot blood all the way from the top of your head to the tips of your toes.',
+    topic: '2. The 4 Chambers of the Human Heart',
+    transcript: 'Point 2: Parts of the Heart. Your heart has 4 hollow rooms: 2 Atria on top that receive blood, and 2 Ventricles on the bottom that pump blood out. The right side handles oxygen-poor blue blood, and the left side handles oxygen-rich red blood!',
+    voice: 'Moving to our second point: What does the inside of your heart look like? Your heart is about the size of your clenched fist, sitting right in the middle of your chest. Internally, it has four rooms: two upper receiving rooms called atria, and two lower pumping rooms called ventricles. The right side—colored blue on our screen—handles used blood coming back from your body, while the left side—colored red—handles fresh, oxygen-rich blood coming from your lungs.',
   },
   {
     startSec: 125,
     stage: 2,
-    topic: '2. Left Ventricle: 3× Myocardium Wall Thickness',
-    transcript: 'Left Ventricle wall (12-15mm) is 3× thicker than RV (3-5mm) because it must generate ~120 mmHg to overcome massive systemic vascular resistance across 60,000 miles of vessels.',
-    voice: 'Notice this crucial anatomical distinction on your screen: the left ventricle myocardium is three times thicker than the right. While the right ventricle only pumps a few inches into low-pressure lungs, the left ventricle must generate enough hydraulic force to shoot blood to the top of your head and tips of your toes.',
+    topic: '2. Left Ventricle: Powerful Body Pump',
+    transcript: 'The Left Ventricle has the thickest, strongest muscle wall because while the right side only pumps blood a short distance to the lungs, the left ventricle must pump blood all the way to your brain and toes!',
+    voice: 'Look closely at the bottom two chambers. Notice how the wall of the left ventricle is much thicker and stronger than the right ventricle! Why? Because the right ventricle only has to push blood a couple of inches over to your lungs, but the left ventricle has to pump blood all the way up to your brain and all the way down to your toes!',
   },
   {
     startSec: 150,
     stage: 2,
-    topic: '2. Parts of the Heart: The 4 Valves & Chordae Tendineae',
-    transcript: 'Four cardiac valves enforce unidirectional flow: Tricuspid & Bicuspid (Mitral) AV valves anchored by chordae tendineae, and Pulmonary & Aortic semilunar valves producing the classic Lub-Dub heart sounds.',
-    voice: 'Now observe the four one-way valves that prevent dangerous regurgitation. Between the atria and ventricles lie the atrioventricular valves: the Tricuspid on the right, and the Bicuspid—or Mitral valve—on the left, anchored by fibrous chordae tendineae and papillary muscles. Guarding the arterial exits are the semilunar valves: the Pulmonary and Aortic valves. When you listen to a stethoscope, the heartbeat sounds lub-dub: "lub" is the resonant closure of the A-V valves during ventricular contraction, and "dub" is the crisp snap of the semilunar valves as the ventricles relax.',
+    topic: '2. Heart Valves: One-Way Trapdoors',
+    transcript: 'Four one-way valves act like trapdoors: they open to let blood pass forward and snap shut immediately so blood cannot leak backwards.',
+    voice: 'Now look at the four one-way valves. These act like trapdoors inside your heart. When the chambers squeeze, the valves swing open to let blood move forward, and then they snap shut so blood cannot slosh backwards.',
   },
   {
     startSec: 175,
     stage: 2,
-    topic: '2. Cardiac Valves: S₁/S₂ Heart Sounds (Lub-Dub)',
-    transcript: 'Heart sounds: S₁ "LUB" is caused by AV valve closure at the onset of ventricular systole; S₂ "DUB" is caused by semilunar valve closure at the onset of ventricular diastole.',
-    voice: 'When a physician listens with a stethoscope, the characteristic lub-dub sounds are actually valve closures: lub is the closure of the A-V valves, and dub is the closure of the semilunar valves.',
+    topic: '2. The "Lub-Dub" Heartbeat Sound',
+    transcript: 'The "lub-dub" sound you hear through a stethoscope is the sound of your heart valves snapping shut: "Lub" is the top valves closing, and "Dub" is the exit valves closing right after!',
+    voice: 'Whenever you hear a heartbeat through a stethoscope—lub-dub, lub-dub—you are actually hearing those trapdoor valves snapping shut! The "lub" is the first set of valves closing, and the "dub" is the exit valves snapping shut right after.',
   },
   {
     startSec: 200,
     stage: 3,
-    topic: '3. The Journey of Blood in the Circulatory System',
-    transcript: 'Point 3: The Journey of Blood. Tracing the 8-step Dual Circulation Figure-8 circuit: Vena Cavae ➔ Right Atrium ➔ Tricuspid ➔ Right Ventricle ➔ Pulmonary Trunk ➔ Lungs (O2 pickup) ➔ Pulmonary Veins ➔ Left Atrium ➔ Mitral Valve ➔ Left Ventricle ➔ Aorta ➔ Systemic Body!',
-    voice: 'Now, let us examine our third and culminating topic: The complete journey of blood in the circulatory system. Humans possess a dual circulation system organized like a figure-eight: the pulmonary loop on top, and the systemic loop below. Let us trace a single red blood cell along its eight-step journey. First, deoxygenated blood depleted of oxygen returns from your tissues through the superior and inferior vena cavae into the right atrium. Second, it passes through the tricuspid valve into the right ventricle. Third, the right ventricle contracts, pumping blood through the pulmonary semilunar valve into the pulmonary artery toward both lungs. In the alveolar capillaries, blood releases carbon dioxide and becomes saturated with fresh oxygen. Step four: this vibrant oxygenated blood returns through the four pulmonary veins into the left atrium.',
+    topic: '3. Loop 1: Heart to Lungs (The Pulmonary Circuit)',
+    transcript: 'Point 3: The Double Loop. Loop 1 sends used blood from the right side of the heart to the lungs, where you exhale CO2 and breathe in fresh O2!',
+    voice: 'Now for our third topic: The Double Loop journey! Humans have a figure-eight circulatory system. In Loop One, oxygen-poor blood returns from your body into the right atrium, passes into the right ventricle, and is pumped to your lungs. In your lungs, the blood drops off carbon dioxide so you can breathe it out, and picks up fresh oxygen that you breathe in!',
   },
   {
     startSec: 250,
     stage: 3,
-    topic: '3. Blood Journey: Systemic Propulsion via Aorta',
-    transcript: 'Oxygen-saturated blood surges through the Mitral valve into the Left Ventricle, ejecting through the Aortic valve into the Aorta Arch at 120 mmHg, delivering life-sustaining O2 across systemic arteries before returning to repeat the cycle!',
-    voice: 'Continuing our journey at step five: blood flows from the left atrium through the mitral valve into the powerful left ventricle. Step six: with immense force, the left ventricle contracts in systole, propelling blood through the aortic valve into the ascending aorta and aortic arch. Step seven: systemic arteries branch out, channeling oxygen-rich blood into millions of capillary networks across your brain, kidneys, liver, and skeletal muscles. And step eight: after unloading oxygen and absorbing cellular wastes, the deoxygenated blood converges into systemic venules and veins, returning to the vena cava to repeat this miraculous journey every sixty seconds! That completes our five-minute lecture. Students, please turn your attention to your desk worksheets for our cardiology assessment!',
+    topic: '3. Loop 2: Heart to Entire Body (The Systemic Circuit)',
+    transcript: 'In Loop 2, oxygen-rich blood returns from the lungs into the left atrium, moves into the left ventricle, and is pumped through the giant Aorta to your brain, muscles, and every organ!',
+    voice: 'In Loop Two, that bright red, oxygen-rich blood returns to the left atrium, drops into the powerful left ventricle, and whoosh—it gets pumped through the giant Aorta artery out to your brain, your stomach, and your leg muscles! After delivering oxygen, the blood returns back to the right side of the heart to start all over again. That completes our five-minute lesson! Now, students, look at your worksheets and screens for our Grade 8 science pop quiz!',
   },
 ];
 
@@ -545,13 +545,13 @@ class LectureService {
 
     // Question 1: One student (Sophia) raises hand to answer
     this.speak(
-      'Class, for our assessment, Question One is on the board and on your desk worksheets. Which chamber of the human heart has the thickest muscular wall? ... Ah, I see one hand raised. Yes, Sophia in row two, go ahead!',
+      'Class, for our assessment, Question One is on the board, on your desk worksheets, and on your screens. Which chamber of the human heart has the thickest, strongest muscular wall to pump fresh blood through your entire body? ... Ah, I see one hand raised. Yes, Sophia in row two, go ahead!',
       () => {
         // Sophia speaks up in a natural student voice
-        store.setLectureTranscript('🗣️ Sophia Garcia (R2-S2): "Um, it\'s Option A, Mr. John! The Left Ventricle has the thickest myocardium because it pumps blood through the aorta to the entire systemic body!"');
+        store.setLectureTranscript('🗣️ Sophia Garcia (R2-S2): "Um, it\'s Option A, Mr. John! The Left Ventricle has the thickest muscle wall because it pumps blood all the way to our brain and our toes!"');
         classroomVoiceService.speakStudent(
           'Sophia',
-          "Um, it's Option A, Mr. John! The Left Ventricle has the thickest myocardium because it pumps blood through the aorta to the entire systemic body!",
+          "Um, it's Option A, Mr. John! The Left Ventricle has the thickest muscle wall because it pumps blood all the way to our brain and our toes!",
           {
             onEnd: () => {
               store.setLectureTranscript('📝 Sophia Garcia answered Option A! Confirm on your desk worksheet or click Submit!');
@@ -581,7 +581,7 @@ class LectureService {
       store.setActiveStudentAnswer({
         studentName: 'Sophia Garcia',
         seatId: 'Row 2, Seat 2',
-        answerText: 'Option A: Left Ventricle (thick myocardium to overcome high systemic vascular resistance)',
+        answerText: 'Option A: Left Ventricle (strongest chamber pumping blood to brain and toes)',
         isCorrect,
         questionIndex: 0,
       });
@@ -590,19 +590,19 @@ class LectureService {
           isCorrect: true,
           text: `✅ Correct! Sophia Garcia and you got it right: ${q.explanation}`,
         });
-        this.speak(`Spot on, Sophia! The left ventricle wall is three times thicker than the right to overcome systemic vascular resistance. Exactly right!`);
+        this.speak(`Spot on, Sophia! The left ventricle wall is the thickest because it pumps blood all the way to your brain and toes. Exactly right!`);
       } else {
         store.setQuizFeedback({
           isCorrect: false,
           text: `❌ Not quite. Remember: ${q.explanation}`,
         });
-        this.speak(`Not quite. Look at the board diagram: the left ventricle requires the thickest myocardium to supply the entire body.`);
+        this.speak(`Not quite. Look at the diagram: the left ventricle requires the strongest muscle to supply your whole body.`);
       }
     } else if (questionIndex === 1) {
       store.setActiveStudentAnswer({
         studentName: 'Ethan Vance',
         seatId: 'Row 3, Seat 5',
-        answerText: 'Option A: Bicuspid (Mitral) Valve (anchored by chordae tendineae)',
+        answerText: 'Option A: To keep blood flowing forward in one direction and stop backflow',
         isCorrect,
         questionIndex: 1,
       });
@@ -611,37 +611,37 @@ class LectureService {
           isCorrect: true,
           text: `✅ Correct! Ethan Vance and the class identified: ${q.explanation}`,
         });
-        this.speak(`Yes! The Mitral, or Bicuspid, valve prevents regurgitation back into the left atrium during ventricular systole.`);
+        this.speak(`Yes, Ethan! The heart valves act like one-way trapdoors to keep blood moving forward and prevent backflow.`);
       } else {
         store.setQuizFeedback({
           isCorrect: false,
-          text: `❌ It's the Bicuspid (Mitral) Valve! ${q.explanation}`,
+          text: `❌ Heart valves prevent backflow! ${q.explanation}`,
         });
-        this.speak(`The valve guarding the left atrium is the Mitral or Bicuspid valve. Let us make sure that is written down clearly.`);
+        this.speak(`Remember, the main job of heart valves is to act like one-way doors to prevent backward leakage.`);
       }
     } else if (questionIndex === 2) {
       store.setActiveStudentAnswer({
         studentName: 'Classroom Collective',
         seatId: 'Whole Class',
-        answerText: 'Option A: Sinoatrial (SA) Node (Natural Pacemaker setting 60-100 bpm)',
+        answerText: 'Option A: The heart valves snapping shut as the chambers squeeze and relax',
         isCorrect,
         questionIndex: 2,
       });
       if (isCorrect) {
         store.setQuizFeedback({
           isCorrect: true,
-          text: `✅ Correct! Sinoatrial (SA) Node! The whole class shouted it: ${q.explanation}`,
+          text: `✅ Correct! The Lub-Dub sound is heart valves snapping shut! ${q.explanation}`,
         });
-        this.speak(`Yes, yes! The Sinoatrial Node, the S-A node, is the primary pacemaker! Great energy class, but remember to wait to be called on!`);
+        this.speak(`Yes, yes! The lub-dub sound is caused by your heart valves snapping shut! Great energy class, but remember to wait to be called on!`);
       } else {
         store.setQuizFeedback({
           isCorrect: false,
-          text: `❌ The pacemaker is the Sinoatrial (SA) Node! ${q.explanation}`,
+          text: `❌ The sound comes from valves snapping shut! ${q.explanation}`,
         });
-        this.speak(`Remember, the natural primary pacemaker is the Sinoatrial Node in the right atrium.`);
+        this.speak(`Remember, that lub-dub sound in a stethoscope is made by the heart valves snapping shut.`);
       }
     } else if (questionIndex === 3) {
-      // Question 4: Open-ended Clinical Physiology
+      // Question 4: Open-ended Gym Class Inquiry
       const answer = customAnswerText || q.studentAnswerText;
       store.setActiveStudentAnswer({
         studentName: 'Liam Patel',
@@ -652,23 +652,23 @@ class LectureService {
       });
       store.setQuizFeedback({
         isCorrect: true,
-        text: `✅ Outstanding Clinical Reasoning! Liam Patel correctly applied Laplace's Law and afterload mechanics: ${q.explanation}`,
+        text: `✅ Outstanding Science Reasoning! Liam Patel explained muscle oxygen demand: ${q.explanation}`,
       });
-      this.speak(`Brilliant clinical deduction, Liam! Laplace's Law states wall stress equals pressure times radius divided by two times wall thickness. Chronic systemic hypertension increases LV afterload, forcing myocytes to thicken concentrically to normalize tension, while the low-pressure pulmonary circuit spares the right ventricle.`);
+      this.speak(`Brilliant deduction, Liam! When your leg muscles sprint, they need more oxygen and energy to keep working, so your heart pumps faster and your lungs breathe faster!`);
     } else if (questionIndex === 4) {
-      // Question 5: Graph Builder
+      // Question 5: Blood Flow Order
       store.setActiveStudentAnswer({
         studentName: 'Ethan Vance',
         seatId: 'Row 3, Seat 1',
-        answerText: 'Steepest Pressure Drop: Arterioles (plunging from ~85 down to ~35 mmHg, accounting for ~60% of TPR)',
+        answerText: 'Vascular Path: Heart ➔ Arteries (Away) ➔ Capillaries (Exchange) ➔ Veins (Back to Heart)',
         isCorrect: true,
         questionIndex: 4,
       });
       store.setQuizFeedback({
         isCorrect: true,
-        text: `✅ Hemodynamic Graph Plotted! Ethan Vance identified the arteriolar resistance drop: ${q.explanation}`,
+        text: `✅ Highway Order Traced! Ethan Vance identified the correct vessel path: ${q.explanation}`,
       });
-      this.speak(`Superb graphing, Ethan! Look at the digital board: the steep pressure drop from 85 down to 35 millimeters of mercury occurs right across the arterioles, which produce 60 percent of systemic peripheral resistance to protect delicate capillaries!`);
+      this.speak(`Superb work, Ethan! Arteries carry blood away from the heart, capillaries deliver oxygen to cells, and veins carry blood back!`);
     }
   }
 
@@ -688,20 +688,20 @@ class LectureService {
         store.setActiveStudentAnswer({
           studentName: 'Ethan Vance',
           seatId: 'Row 3, Seat 5',
-          answerText: 'Option A: Bicuspid (Mitral) Valve (anchored by chordae tendineae)',
+          answerText: 'Option A: To keep blood flowing forward in one direction and stop backflow',
           isCorrect: true,
           questionIndex: 1,
         });
-        store.setLectureTranscript('📝 Question 2: Which valve prevents backflow into the left atrium? (Dead silence... Not a single student raises their hand!)');
+        store.setLectureTranscript('📝 Question 2: What is the main job of heart valves? (Dead silence... Not a single student raises their hand!)');
         this.speak(
-          'Now for Question Two on the board: Which anatomical valve prevents the backflow of blood from the left ventricle into the left atrium during ventricular systole? ... Anyone? Nobody? Not a single hand raised? Dead silence from the entire room?',
+          'Now for Question Two on the board: What is the main job of the one-way valves inside your heart? ... Anyone? Nobody? Not a single hand raised? Dead silence from the entire room?',
           () => {
             // Ethan mutters timidly after awkward silence
             setTimeout(() => {
-              store.setLectureTranscript('🗣️ Ethan Vance (R3-S5, muttering nervously): "...is it... the bicuspid mitral valve, Mr. John...?"');
-              classroomVoiceService.speakStudent('Ethan', '...is it... the bicuspid mitral valve, Mr. John...?', {
+              store.setLectureTranscript('🗣️ Ethan Vance (R3-S5, muttering nervously): "...is it... Option A, Mr. John? To stop blood from leaking backwards...?"');
+              classroomVoiceService.speakStudent('Ethan', '...is it... Option A, Mr. John? To stop blood from leaking backwards...?', {
                 onEnd: () => {
-                  store.setLectureTranscript('📝 Ethan Vance answered Bicuspid (Mitral) Valve! Confirm your choice.');
+                  store.setLectureTranscript('📝 Ethan Vance answered Option A! Confirm your choice.');
                 },
               });
             }, 800);
@@ -712,33 +712,33 @@ class LectureService {
         store.setActiveStudentAnswer({
           studentName: 'Classroom Collective',
           seatId: 'Whole Class Desks',
-          answerText: 'Option A: Sinoatrial (SA) Node (Primary Cardiac Pacemaker)',
+          answerText: 'Option A: The heart valves snapping shut as the chambers squeeze and relax',
           isCorrect: true,
           questionIndex: 2,
         });
-        store.setLectureTranscript('📝 Question 3: Which cardiac cluster is the natural primary pacemaker? (Total Chaos! All students waving hands and answering simultaneously!)');
+        store.setLectureTranscript('📝 Question 3: What creates the "lub-dub" heartbeat sound? (Total Chaos! All students waving hands and shouting together!)');
         this.speak(
-          'Alright, Question Three! Which specialized cardiac cluster acts as the natural primary pacemaker of the heart, initiating electrical impulses?',
+          'Alright, Question Three! When a doctor listens to your heart with a stethoscope, what creates the familiar lub-dub sound?',
           () => {
             // Students shout simultaneously!
             classroomAtmosphereAudioService.playClassroomMurmur(3400);
-            store.setLectureTranscript('🗣️ Class (Chaos Shouting): "Option A! SA Node! The Sinoatrial Node!"');
+            store.setLectureTranscript('🗣️ Class (Chaos Shouting): "Option A! The valves snapping shut! Lub-dub!"');
             classroomVoiceService.speakClassChaos(
               [
-                { name: 'Sophia', gender: 'female', text: 'Option A! The SA Node!' },
-                { name: 'Ethan', gender: 'male', text: 'SA Node! Option A!' },
-                { name: 'Liam', gender: 'male', text: "It's the Sinoatrial Node, Mr. John!" },
+                { name: 'Sophia', gender: 'female', text: 'Option A! The valves snapping shut!' },
+                { name: 'Ethan', gender: 'male', text: 'It is the valves! Lub-dub!' },
+                { name: 'Liam', gender: 'male', text: "The heart valves closing, Mr. John!" },
               ],
               () => {
                 // Teacher calms down the room
-                store.setLectureTranscript('👨‍🏫 Teacher John: "Whoa, whoa, everyone at once! Calm down, class! Great energy, now mark Option A on your worksheets!"');
-                this.speak('Whoa, whoa! Everyone at once! Calm down, class! One at a time! Everyone is shouting over each other! Great energy, yes, the Sinoatrial Node is correct! Now verify your answer on your worksheet!');
+                store.setLectureTranscript('👨‍🏫 Teacher John: "Whoa, whoa, everyone at once! Great energy, now mark Option A on your worksheets!"');
+                this.speak('Whoa, whoa! Everyone at once! Calm down, class! One at a time! Everyone is shouting over each other! Great energy, yes, the valves snapping shut create the lub-dub sound! Now verify your answer on your worksheet!');
               }
             );
           }
         );
       } else if (nextIdx === 3) {
-        // Question 4: Open-Ended Clinical Inquiry - Liam Patel answers
+        // Question 4: Open-Ended Gym Class Inquiry - Liam Patel answers
         store.setActiveStudentAnswer({
           studentName: 'Liam Patel',
           seatId: 'Row 1, Seat 3',
@@ -746,24 +746,24 @@ class LectureService {
           isCorrect: true,
           questionIndex: 3,
         });
-        store.setLectureTranscript('📝 Question 4 (Open-Ended Clinical Inquiry): Liam Patel (Row 1, Seat 3) raises his hand to explain afterload and Laplace mechanics...');
+        store.setLectureTranscript('📝 Question 4 (Science Inquiry): Liam Patel (Row 1, Seat 3) raises his hand to explain heart rate and breathing in gym class...');
         this.speak(
-          'Now Question Four is an open-ended clinical inquiry: Why does chronic systemic arterial hypertension cause Left Ventricular Hypertrophy rather than Right Ventricular Hypertrophy? Explain the hemodynamic afterload mechanism. ... Liam in row one, go ahead!',
+          'Now Question Four is a science inquiry: Why do your heart rate and breathing rate increase when you are sprinting in gym class? ... Liam in row one, go ahead!',
           () => {
-            store.setLectureTranscript('🗣️ Liam Patel (R1-S3): "In chronic hypertension, systemic vascular resistance creates extreme afterload on the Left Ventricle. By Laplace\'s Law, myocytes hypertrophy to normalize wall stress. The pulmonary circuit is low resistance, sparing the RV!"');
+            store.setLectureTranscript('🗣️ Liam Patel (R1-S3): "When we sprint, our leg muscle cells burn more energy and need extra oxygen. Our heart beats faster to pump fresh oxygen-rich blood, and our lungs breathe faster to take in oxygen and get rid of carbon dioxide waste!"');
             classroomVoiceService.speakStudent(
               'Liam',
-              "In chronic hypertension, systemic vascular resistance creates extreme afterload on the Left Ventricle. By Laplace's Law, myocytes hypertrophy to normalize wall stress. The pulmonary circuit is low resistance, sparing the RV!",
+              "When we sprint, our leg muscle cells burn more energy and need extra oxygen. Our heart beats faster to pump fresh oxygen-rich blood, and our lungs breathe faster to take in oxygen and get rid of carbon dioxide waste!",
               {
                 onEnd: () => {
-                  store.setLectureTranscript('👨‍🏫 Teacher John: "Textbook clinical application, Liam! Review Liam\'s explanation on the board and submit your clinical notes."');
+                  store.setLectureTranscript('👨‍🏫 Teacher John: "Spot-on scientific reasoning, Liam! Review Liam\'s explanation on the board and submit your notes."');
                 },
               }
             );
           }
         );
       } else if (nextIdx === 4) {
-        // Question 5: Graph Builder - Ethan Vance plots pressure gradient curve
+        // Question 5: Vascular Highway Flow Path - Ethan Vance answers
         store.setActiveStudentAnswer({
           studentName: 'Ethan Vance',
           seatId: 'Row 3, Seat 1',
@@ -771,17 +771,17 @@ class LectureService {
           isCorrect: true,
           questionIndex: 4,
         });
-        store.setLectureTranscript('📝 Question 5 (Hemodynamics Graph Builder): Ethan Vance plots the dynamic vascular pressure gradient on the smart screen...');
+        store.setLectureTranscript('📝 Question 5 (Vascular Highway Flow Path): Ethan Vance traces the order of blood vessels on the screen...');
         this.speak(
-          'For Question Five, we are plotting the cardiovascular pressure gradient across the vascular highway from the Aorta to the Vena Cava. Ethan in row three, where does your graph show the steepest pressure drop?',
+          'For Question Five, we are tracing the path of blood after leaving the heart through the three types of blood vessels. Ethan in row three, what is the correct order?',
           () => {
-            store.setLectureTranscript('🗣️ Ethan Vance (R3-S1): "The graph plots the steepest drop across the Arterioles—falling from 85 down to 35 millimeters of mercury because of high vascular smooth muscle resistance, producing 60 percent of Total Peripheral Resistance!"');
+            store.setLectureTranscript('🗣️ Ethan Vance (R3-S1): "Blood leaves the heart into Arteries that carry blood Away, flows into tiny Capillaries that deliver oxygen to cells, and returns through Veins back to the heart!"');
             classroomVoiceService.speakStudent(
               'Ethan',
-              'The graph plots the steepest drop across the Arterioles—falling from 85 down to 35 millimeters of mercury because of high vascular smooth muscle resistance, producing 60 percent of Total Peripheral Resistance!',
+              'Blood leaves the heart into Arteries that carry blood Away, flows into tiny Capillaries that deliver oxygen to cells, and returns through Veins back to the heart!',
               {
                 onEnd: () => {
-                  store.setLectureTranscript('👨‍🏫 Teacher John: "Outstanding graph plotting, Ethan! Look at the dynamic pressure drop curve rendered on the smart screen!"');
+                  store.setLectureTranscript('👨‍🏫 Teacher John: "Outstanding job, Ethan! Look at the vessel order diagram rendered on the board!"');
                 }
               }
             );
@@ -792,9 +792,9 @@ class LectureService {
       store.setLectureState('completed');
       store.setQuizFeedback({
         isCorrect: true,
-        text: '🎉 Congratulations! You have completed the Anatomy of the Human Heart & Hemodynamics Practicum with Teacher John!',
+        text: '🎉 Congratulations! You have completed the Grade 8 Circulatory System & Heart Science Lesson with Teacher John!',
       });
-      this.speak('Congratulations to everyone! You have successfully completed today\'s lesson on the Anatomy of the Human Heart and Cardiovascular Hemodynamics. Outstanding participation across all five questions!');
+      this.speak('Congratulations to everyone! You have successfully completed today\'s Grade 8 lesson on the Human Heart and the Circulatory System. Fantastic participation across all five questions!');
     }
   }
 

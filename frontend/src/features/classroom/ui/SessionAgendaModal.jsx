@@ -95,10 +95,10 @@ export const SessionAgendaModal = () => {
           }}
         >
           <Typography variant="subtitle2" sx={{ color: '#94a3b8', fontSize: '11px', textTransform: 'uppercase' }}>
-            Lecture Module (5 Minutes Synchronized)
+            Grade 8 Science Module (5 Minutes Synchronized)
           </Typography>
           <Typography variant="body1" sx={{ color: '#f1f5f9', fontWeight: 700, mt: 0.5 }}>
-            The Four Heart Chambers, Valves & Systemic/Pulmonary Figure-8 Loop
+            The 4 Heart Chambers, Valves & Double-Loop Circulation
           </Typography>
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mt: 1 }}>
             <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, color: '#38bdf8', fontSize: '12px' }}>
